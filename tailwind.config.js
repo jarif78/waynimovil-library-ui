@@ -24,9 +24,6 @@ module.exports = {
       '5xl': '2.75rem',
       '6xl': '4.625rem',
     },
-    fill: {
-      'white': theme('colors.white'),
-    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
@@ -75,7 +72,6 @@ module.exports = {
 
   variants: {
     opacity: ['responsive', 'hover', 'focus', 'disabled'],
-    fill: ['responsive', 'hover', 'focus', 'disabled'],
   },
 
   plugins: [],
