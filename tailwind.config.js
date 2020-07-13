@@ -103,6 +103,8 @@ module.exports = {
     opacity: ['responsive', 'hover', 'focus', 'active', 'disabled'],
     outline: ['responsive', 'hover', 'focus', 'active', 'disabled'],
     borderRadius: ['responsive', 'hover', 'focus', 'active', 'disabled'],
+    backgroundColor: ['responsive', 'hover', 'focus', 'active', 'disabled'],
+    fontSize: ['responsive', 'hover', 'focus', 'active', 'disabled'],
   },
 
   plugins: [

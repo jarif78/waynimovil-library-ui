@@ -47,8 +47,7 @@
                     Pagá tu préstamo
                 </button>
 
-                <button class="bg-transparent 
-                                hover:bg-green-100 
+                <button class="bg-transparent
                                 text-black 
                                 text-xs
                                 font-bold
@@ -58,7 +57,13 @@
                                 border-grey-500
                                 hover:border-transparent
                                 rounded-full
-                                lg:hidden">
+                                lg:hidden
+                                hover:bg-purple-900
+                                hover:text-white    
+                                focus:outline-none
+                                focus:shadow-outline-gray
+                                active:bg-black
+                                active:text-white">
                     Ingresar
                 </button>
             </div>
@@ -67,10 +72,11 @@
 
     <!--HERO-->
     <div id="hero" class="flex flex-wrap">
-        <div id="info" class="px-3">
+        <div id="info" class="w-full px-3">
             <h1 class="mt-8 mb-6 text-black text-4xl font-bold leading-tight text-center">Tenemos un préstamos para vos</h1>
 
-            <button class="xs:w-full 
+            <button class="w-full 
+                            md:w-1/2
                             bg-green-900 
                             hover:bg-green-100 
                             text-white 
@@ -78,13 +84,20 @@
                             font-bold
                             py-2 
                             px-6 
-                            rounded-full">
-                ¡Solicitá tu préstamos!
+                            rounded-full
+                            focus:outline-none
+                            focus:shadow-outline-green
+                            hover:bg-purple-900
+                            hover:text-white
+                            active:bg-black
+                            active:text-white">
+                ¡Solicitá tu préstamo!
             </button>
 
-            <button class="w-full mt-6 
-                            bg-transparent 
-                            hover:bg-green-100 
+            <button class="w-full 
+                            md:w-1/2
+                            mt-6 
+                            bg-transparent                             
                             text-black 
                             text-base
                             font-bold
@@ -93,7 +106,13 @@
                             border
                             border-grey-500
                             hover:border-transparent
-                            rounded-full">
+                            rounded-full
+                            hover:bg-purple-900
+                            hover:text-white    
+                            focus:outline-none
+                            focus:shadow-outline-gray
+                            active:bg-black
+                            active:text-white">
                 Pagá tu préstamo
             </button>
 
@@ -108,14 +127,23 @@
             </div>
 
             <div class="mt-2 mb-6 ml-20">
-                <a class="text-xs font-bold text-black inline-flex items-center" href="#">
+                <a class="text-xs 
+                        font-bold 
+                        text-black 
+                        inline-flex 
+                        items-center
+                        hover:underline  
+                        focus:underline
+                        active:bg-gray-300
+                        active:rounded" href="#">
                     <img class="mr-1" src="./assets/images/arrow-simple-next.svg" alt="arrow" width="16" height="16">
                     Conocé los requisitos
                 </a>
             </div>
             
         </div>
-        <div id="image">
+
+        <div id="image" class="w-full flex justify-center">
             <img class="xs:block lg:hidden" src="./assets/images/hero-xs.svg" alt="hero">
             <img class="xs:hidden lg:block" src="./assets/images/hero-lg.svg" alt="hero">
         </div>
@@ -131,8 +159,9 @@
             <table class="table-fixed mt-4">
                 <tbody>
                     <tr>
-                        <td class="w-14 align-top">
+                        <td class="w-14 flex flex-col items-center">
                             <img src="./assets/images/bullet-one-green.svg" alt="bullet" width="44" height="44">
+                            <img class="mt-5" src="./assets/images/vertical-line-sm.svg" alt="vertical line">
                         </td>
                         <td>
                             <h3 class="text-xl font-bold">Te registrás con tu DNI</h3>                    
@@ -140,8 +169,9 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="align-top">
+                        <td class="flex flex-col items-center">
                             <img src="./assets/images/bullet-two-green.svg" alt="bullet" width="44" height="44">
+                            <img class="mt-5" src="./assets/images/vertical-line-lg.svg" alt="vertical line">
                         </td>
                         <td>
                             <h3 class="text-xl font-bold">Calculamos el mejor préstamo para vos</h3>                    
@@ -149,7 +179,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="align-top">
+                        <td class="flex flex-col items-center">
                             <img src="./assets/images/bullet-three-green.svg" alt="bullet" width="44" height="44">
                         </td>
                         <td>
@@ -178,7 +208,16 @@
             <div class="relative w-full h-84 sm:w-full lg:w-1/4 bg-white mt-6 p-6 border rounded rounded-br-2xl shadow-2xl">
                 <h4 class="text-2xl text-green-900 font-bold w-2/3">Queremos verte crecer</h4>
                 <p class="text-base mt-6">Te ayudamos a crear un historial crediticio para que puedas acceder cada vez a mejores oportunidades de préstamo. No solo con nosotros, sino en todo el ecosistema financiero.</p>
-                <a class="text-base font-bold text-green-900 inline-flex items-center mt-6" href="#">
+                <a class="text-base 
+                        font-bold 
+                        text-green-900 
+                        inline-flex 
+                        items-center
+                        mt-6
+                        hover:underline  
+                        focus:underline
+                        active:bg-gray-300
+                        active:rounded" href="#">
                     <img class="mr-1" src="./assets/images/arrow-simple-next-green.svg" alt="arrow" width="6" height="6">
                     Quiero saber más
                 </a>
@@ -202,19 +241,34 @@
     <div id="cta" class="px-3 mt-22">
         <h2 class="text-3xl font-bold text-center">Descubrí cuánto podemos prestarte</h2>
         <button class="xs:w-full 
-                        bg-green-900 
-                        hover:bg-green-100 
+                        bg-green-900
                         text-white 
                         text-base
                         font-bold
                         py-2 
                         px-6 
                         rounded-full
-                        mt-6">
+                        mt-6
+                        focus:outline-none
+                        focus:shadow-outline-green
+                        hover:bg-purple-900
+                        hover:text-white
+                        active:bg-black
+                        active:text-white">
             ¡Solicitá tu préstamos!
         </button>
         <p class="mt-6 text-xs text-center">Un préstamo es una ayuda frente una necesidad o una oportunidad de crecimiento. Pero también es un compromiso. Tomalo sólo si lo necesitás.</p>
-        <a class="text-xs font-bold text-black inline-flex items-center mt-2 ml-20" href="#">
+        <a class="text-xs 
+                font-bold 
+                text-black 
+                inline-flex 
+                items-center 
+                mt-2 
+                ml-20
+                hover:underline  
+                focus:underline
+                active:bg-gray-300
+                active:rounded" href="#">
             <img class="mr-1" src="./assets/images/arrow-simple-next.svg" alt="arrow" width="16" height="16">
             Conocé nuestra visión
         </a>
@@ -256,7 +310,18 @@
         </div>
         <p class="text-xl">La vas a poder usar para hacer compras en cuotas por Internet o en cualquier lugar físico que acepte Visa 😉</p>
         <p class="text-xl mt-6">Dejanos tu email y enterate cuando esté lista!</p>
-        <input class="mt-6 shadow appearance-none border rounded w-full py-4 px-3 text-gray-900 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Tu email">
+        <input class="mt-6 
+                    shadow 
+                    appearance-none 
+                    border 
+                    rounded 
+                    w-full 
+                    py-4 
+                    px-3 
+                    text-gray-900 
+                    leading-tight 
+                    focus:outline-none 
+                    focus:shadow-outline-gray" type="text" placeholder="Tu email...">
     </div>
 
     <!--FAQ-->
@@ -309,14 +374,19 @@
 
         <button class="xs:w-full 
                         mt-6
-                        bg-green-900 
-                        hover:bg-green-100 
+                        bg-green-900
                         text-white 
                         text-base
                         font-bold
                         py-2 
                         px-6 
-                        rounded-full">
+                        rounded-full
+                        focus:outline-none
+                        focus:shadow-outline-green
+                        hover:bg-purple-900
+                        hover:text-white
+                        active:bg-black
+                        active:text-white">
             Explorá consultas frecuentes
         </button>
     </div>
@@ -338,13 +408,18 @@
         <button class="xs:w-full 
                         mt-6
                         bg-green-900 
-                        hover:bg-green-100 
                         text-white 
                         text-base
                         font-bold
                         py-2 
                         px-6 
-                        rounded-full">
+                        rounded-full
+                        focus:outline-none
+                        focus:shadow-outline-green
+                        hover:bg-purple-900
+                        hover:text-white
+                        active:bg-black
+                        active:text-white">
             ¡Solicitá tu préstamo!
         </button>
     </div>
@@ -355,13 +430,23 @@
             <img src="./assets/images/wayni-logo-white.svg" alt="logo">
         </div>
         <div class="mt-7">
-            <ul class="text-base font-bold text-center">
-                <li>Soporte</li>
-                <li>Quienes somos</li>
-                <li>Préstamos</li>
-                <li>Billetera Virtual</li>
-                <li>Términos y condiciones</li>
-                <li>Política de privacidad</li>
+            <ul class="text-base 
+                        font-bold 
+                        text-center
+                        leading-loose">
+
+                <li><a class="hover:underline  
+                    focus:underline" href="#">Soporte</a></li>
+                <li><a class="hover:underline  
+                    focus:underline" href="#">Quienes somos</a></li>
+                <li><a class="hover:underline  
+                    focus:underline" href="#">Préstamos</a></li>
+                <li><a class="hover:underline  
+                    focus:underline" href="#">Billetera Virtual</a></li>
+                <li><a class="hover:underline  
+                    focus:underline" href="#">Términos y condiciones</a></li>
+                <li><a class="hover:underline  
+                    focus:underline" href="#">Política de privacidad</a></li>
             </ul>
         </div>
     </div>
