@@ -72,78 +72,84 @@
 
     <!--HERO-->
     <div id="hero" class="flex flex-wrap">
-        <div id="info" class="w-full px-3">
-            <h1 class="mt-8 mb-6 text-black text-4xl font-bold leading-tight text-center">Tenemos un préstamos para vos</h1>
+        <div id="info" class="w-full lg:w-1/2 px-3 lg:mt-35">
+            <h1 class="mt-8 mb-6 text-black text-4xl lg:text-5xl font-bold leading-tight text-center">Tenemos un préstamos para vos</h1>
 
-            <button class="w-full 
-                            md:w-1/2
-                            bg-green-900 
-                            hover:bg-green-100 
-                            text-white 
-                            text-base
-                            font-bold
-                            py-2 
-                            px-6 
-                            rounded-full
-                            focus:outline-none
-                            focus:shadow-outline-green
-                            hover:bg-purple-900
-                            hover:text-white
-                            active:bg-black
-                            active:text-white">
-                ¡Solicitá tu préstamo!
-            </button>
+            <div class="flex justify-center">
+                <button class="w-full 
+                                sm:w-84
+                                bg-green-900 
+                                text-white 
+                                text-base
+                                font-bold
+                                py-2 
+                                px-6 
+                                rounded-full
+                                focus:outline-none
+                                focus:shadow-outline-green
+                                hover:bg-purple-900
+                                hover:text-white
+                                active:bg-black
+                                active:text-white">
+                    ¡Solicitá tu préstamo!
+                </button>
+            </div>
 
-            <button class="w-full 
-                            md:w-1/2
-                            mt-6 
-                            bg-transparent                             
+            <div class="flex justify-center">
+                <button class="w-full 
+                                sm:w-84
+                                mt-6 
+                                bg-transparent                             
+                                text-black 
+                                text-base
+                                font-bold
+                                py-2 
+                                px-6 
+                                border
+                                border-grey-500
+                                hover:border-transparent
+                                rounded-full
+                                hover:bg-purple-900
+                                hover:text-white    
+                                focus:outline-none
+                                focus:shadow-outline-gray
+                                active:bg-black
+                                active:text-white">
+                    Pagá tu préstamo
+                </button>
+            </div>
+
+            <div class="flex justify-center">
+                <div class="flex mt-6">
+                    <div class="inline-flex mr-2 items-start">
+                        <img class="mt-1" src="./assets/images/bullet-check-green.svg" alt="bullet" width="16" height="16">
+                    </div>
+                    <div class="flex-auto text-left items-center">
+                        <p class="text-xs">Pedilo 100% online, sin moverte de tu casa.</p>
+                        <p class="text-xs">Te lo depositamos en tu cuenta en el día.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center">
+                <div class="mt-2 mb-6 ml-20">
+                    <a class="text-xs 
+                            font-bold 
                             text-black 
-                            text-base
-                            font-bold
-                            py-2 
-                            px-6 
-                            border
-                            border-grey-500
-                            hover:border-transparent
-                            rounded-full
-                            hover:bg-purple-900
-                            hover:text-white    
-                            focus:outline-none
-                            focus:shadow-outline-gray
-                            active:bg-black
-                            active:text-white">
-                Pagá tu préstamo
-            </button>
-
-            <div class="flex mt-6">
-                <div class="inline-flex mr-2 items-start">
-                    <img class="mt-1" src="./assets/images/bullet-check-green.svg" alt="bullet" width="16" height="16">
+                            inline-flex 
+                            items-center
+                            hover:underline  
+                            focus:underline
+                            active:bg-gray-300
+                            active:rounded" href="#">
+                        <img class="mr-1" src="./assets/images/arrow-simple-next.svg" alt="arrow" width="16" height="16">
+                        Conocé los requisitos
+                    </a>
                 </div>
-                <div class="flex-auto text-left items-center">
-                    <p class="text-xs">Pedilo 100% online, sin moverte de tu casa.</p>
-                    <p class="text-xs">Te lo depositamos en tu cuenta en el día.</p>
-                </div>
-            </div>
-
-            <div class="mt-2 mb-6 ml-20">
-                <a class="text-xs 
-                        font-bold 
-                        text-black 
-                        inline-flex 
-                        items-center
-                        hover:underline  
-                        focus:underline
-                        active:bg-gray-300
-                        active:rounded" href="#">
-                    <img class="mr-1" src="./assets/images/arrow-simple-next.svg" alt="arrow" width="16" height="16">
-                    Conocé los requisitos
-                </a>
-            </div>
-            
+            </div>            
         </div>
 
-        <div id="image" class="w-full flex justify-center">
+        <div id="image" class="w-full lg:w-1/2 flex justify-center lg:mt-20">
             <img class="xs:block lg:hidden" src="./assets/images/hero-xs.svg" alt="hero">
             <img class="xs:hidden lg:block" src="./assets/images/hero-lg.svg" alt="hero">
         </div>
@@ -151,136 +157,164 @@
 
     <!--PROPOSAL-->
     <div id="proposal">
-        <h2 class="text-3xl font-bold text-center">Pedir un préstamo en Waynimovil es simple:</h2>
-        <div id="proposal-image">
-            <img src="./assets/images/proposal-xs.svg" alt="proposal">
+        <h2 class="text-3xl font-bold text-center mt-32">Pedir un préstamo en Waynimovil es simple:</h2>
+
+        <div class="flex justify-center lg:inline-block">
+            <div id="proposal-image">
+                <img class="xs:block sm:hidden xl:hidden" src="./assets/images/proposal-xs.svg" alt="proposal">
+                <img class="xs:hidden sm:block xl:hidden" src="./assets//images/proposal-lg.svg" alt="proposal">
+                <img class="xs:hidden sm:hidden xl:block" src="./assets/images/proposal-xl.svg" alt="proposal">
+            </div>
         </div>
-        <div id="proposal-detail" class="px-3">
-            <table class="table-fixed mt-4">
-                <tbody>
-                    <tr>
-                        <td class="w-14 flex flex-col items-center">
-                            <img src="./assets/images/bullet-one-green.svg" alt="bullet" width="44" height="44">
-                            <img class="mt-5" src="./assets/images/vertical-line-sm.svg" alt="vertical line">
-                        </td>
-                        <td>
-                            <h3 class="text-xl font-bold">Te registrás con tu DNI</h3>                    
-                            <p class="text-base mb-11">Sólo necesitamos tu e-mail y celular. Sin vueltas.</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="flex flex-col items-center">
-                            <img src="./assets/images/bullet-two-green.svg" alt="bullet" width="44" height="44">
-                            <img class="mt-5" src="./assets/images/vertical-line-lg.svg" alt="vertical line">
-                        </td>
-                        <td>
-                            <h3 class="text-xl font-bold">Calculamos el mejor préstamo para vos</h3>                    
-                            <p class="text-base mb-11">Te decimos al instante cuánto podemos prestarte y cuáles son las condiciones.</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="flex flex-col items-center">
-                            <img src="./assets/images/bullet-three-green.svg" alt="bullet" width="44" height="44">
-                        </td>
-                        <td>
-                            <h3 class="text-xl font-bold">Te registrás con tu DNI</h3>                    
-                            <p class="text-base mb-11">Sólo necesitamos tu e-mail y celular. Sin vueltas.</p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+
+        <div class="flex justify-center lg:inline-block">
+            <div id="proposal-detail" class="px-3 md:px-35">
+                <table class="table-fixed mt-4">
+                    <tbody>
+                        <tr>
+                            <td class="w-14 flex flex-col items-center">
+                                <img src="./assets/images/bullet-one-green.svg" alt="bullet" width="44" height="44">
+                                <img class="mt-5" src="./assets/images/vertical-line-sm.svg" alt="vertical line">
+                            </td>
+                            <td>
+                                <h3 class="text-xl font-bold">Te registrás con tu DNI</h3>                    
+                                <p class="text-base mb-11">Sólo necesitamos tu e-mail y celular. Sin vueltas.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="flex flex-col items-center">
+                                <img src="./assets/images/bullet-two-green.svg" alt="bullet" width="44" height="44">
+                                <img class="mt-5" src="./assets/images/vertical-line-lg.svg" alt="vertical line">
+                            </td>
+                            <td>
+                                <h3 class="text-xl font-bold">Calculamos el mejor préstamo para vos</h3>                    
+                                <p class="text-base mb-11">Te decimos al instante cuánto podemos prestarte y cuáles son las condiciones.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="flex flex-col items-center">
+                                <img src="./assets/images/bullet-three-green.svg" alt="bullet" width="44" height="44">
+                            </td>
+                            <td>
+                                <h3 class="text-xl font-bold">Te registrás con tu DNI</h3>                    
+                                <p class="text-base mb-11">Sólo necesitamos tu e-mail y celular. Sin vueltas.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
+
     </div>
 
     <!--VALUES-->
     <div id="values" class="px-3">
         <h2 class="text-3xl font-bold text-center">Un préstamo Waynimovil es mucho más que dinero.</h2>
+
         <div class="flex flex-wrap mt-6">
-            <div class="relative w-full h-84 sm:w-full lg:w-1/4 bg-purple-900 text-white p-6 rounded rounded-bl-2xl shadow-2xl">
-                <h4 class="text-2xl font-bold w-2/3">Es un préstamo para todos</h4>
-                <p class="text-base mt-6">Los requisitos son mínimos para que todos puedan acceder a un préstamo Waynimóvil: sólo necesitás validar tu identidad, y tener una cuenta bancaria.</p>
-                
-                <div class="absolute bottom-8 right-8">
-                    <img src="./assets/images/img-1.svg" alt="img">
-                </div>                
+
+            <div class="flex justify-center lg:flex-1 lg:items-start w-full">
+                <div class="relative w-full sm:w-120 lg:w-74 h-84 sm:h-66 lg:h-95 bg-purple-900 text-white p-6 rounded rounded-bl-2xl shadow-2xl">
+                    <h4 class="text-2xl font-bold w-2/3">Es un préstamo para todos</h4>
+                    <p class="text-base mt-6">Los requisitos son mínimos para que todos puedan acceder a un préstamo Waynimóvil: sólo necesitás validar tu identidad, y tener una cuenta bancaria.</p>
+                    
+                    <div class="absolute bottom-8 right-8">
+                        <img src="./assets/images/img-1.svg" alt="img">
+                    </div>                
+                </div>     
             </div>
 
-            <div class="relative w-full h-84 sm:w-full lg:w-1/4 bg-white mt-6 p-6 border rounded rounded-br-2xl shadow-2xl">
-                <h4 class="text-2xl text-green-900 font-bold w-2/3">Queremos verte crecer</h4>
-                <p class="text-base mt-6">Te ayudamos a crear un historial crediticio para que puedas acceder cada vez a mejores oportunidades de préstamo. No solo con nosotros, sino en todo el ecosistema financiero.</p>
-                <a class="text-base 
-                        font-bold 
-                        text-green-900 
-                        inline-flex 
-                        items-center
-                        mt-6
-                        hover:underline  
-                        focus:underline
-                        active:bg-gray-300
-                        active:rounded" href="#">
-                    <img class="mr-1" src="./assets/images/arrow-simple-next-green.svg" alt="arrow" width="6" height="6">
-                    Quiero saber más
-                </a>
-
-                <div class="absolute top-8 right-8">
-                    <img src="./assets/images/img-2.svg" alt="img">
-                </div>                
+            <div class="flex justify-center lg:flex-1 lg:items-start w-full">
+                <div class="relative w-full sm:w-120 lg:w-74 h-84 sm:h-66 lg:h-95 bg-white mt-6 lg:mt-0 p-6 border rounded rounded-br-2xl shadow-2xl">
+                    <h4 class="text-2xl text-green-900 font-bold w-2/3">Queremos verte crecer</h4>
+                    <p class="text-base mt-6">Te ayudamos a crear un historial crediticio para que puedas acceder cada vez a mejores oportunidades de préstamo. No solo con nosotros, sino en todo el ecosistema financiero.</p>
+                    <a class="text-base 
+                            font-bold 
+                            text-green-900 
+                            inline-flex 
+                            items-center
+                            mt-6
+                            hover:underline  
+                            focus:underline
+                            active:bg-gray-300
+                            active:rounded" href="#">
+                        <img class="mr-1" src="./assets/images/arrow-simple-next-green.svg" alt="arrow" width="6" height="6">
+                        Quiero saber más
+                    </a>    
+                    <div class="absolute top-8 right-8">
+                        <img src="./assets/images/img-2.svg" alt="img">
+                    </div>                
+                </div>
             </div>
 
-            <div class="relative w-full h-84 sm:w-full lg:w-1/4 bg-green-900 text-white mt-6 p-6 rounded rounded-tr-2xl shadow-2xl">
-                <h4 class="text-2xl font-bold w-2/3">Estamos disponibles</h4>
-                <p class="text-base mt-6">Si tenés consultas, necesitás ayuda para operar en línea o simplemente preferís hablar con un humano no hay problema: hay un asesor que puede seguir tu caso de cerca.</p>
-                <div class="absolute top-64 right-6">
-                    <img src="./assets/images/img-3.svg" alt="img">
-                </div>                
-            </div>            
+            <div class="flex justify-center lg:flex-1 lg:items-start w-full">
+                <div class="relative w-full sm:w-120 lg:w-74 h-84 sm:h-66 lg:h-95 bg-green-900 text-white mt-6 lg:mt-0 p-6 rounded rounded-tr-2xl shadow-2xl">
+                    <h4 class="text-2xl font-bold w-2/3">Estamos disponibles</h4>
+                    <p class="text-base mt-6">Si tenés consultas, necesitás ayuda para operar en línea o simplemente preferís hablar con un humano no hay problema: hay un asesor que puede seguir tu caso de cerca.</p>
+                    <div class="absolute top-64 sm:top-48 lg:top-75 right-6">
+                        <img src="./assets/images/img-3.svg" alt="img">
+                    </div>                
+                </div>   
+            </div>  
         </div>
     </div>
     
     <!--CTA-->
-    <div id="cta" class="px-3 mt-22">
+    <div id="cta" class="px-3 md:px-35 mt-22">
         <h2 class="text-3xl font-bold text-center">Descubrí cuánto podemos prestarte</h2>
-        <button class="xs:w-full 
-                        bg-green-900
-                        text-white 
-                        text-base
-                        font-bold
-                        py-2 
-                        px-6 
-                        rounded-full
-                        mt-6
-                        focus:outline-none
-                        focus:shadow-outline-green
-                        hover:bg-purple-900
-                        hover:text-white
-                        active:bg-black
-                        active:text-white">
-            ¡Solicitá tu préstamos!
-        </button>
+
+        <div class="flex justify-center">
+            <button class="w-full 
+                            sm:w-84
+                            bg-green-900
+                            text-white 
+                            text-base
+                            font-bold
+                            py-2 
+                            px-6 
+                            rounded-full
+                            mt-6
+                            focus:outline-none
+                            focus:shadow-outline-green
+                            hover:bg-purple-900
+                            hover:text-white
+                            active:bg-black
+                            active:text-white">
+                ¡Solicitá tu préstamos!
+            </button>
+        </div>
+
         <p class="mt-6 text-xs text-center">Un préstamo es una ayuda frente una necesidad o una oportunidad de crecimiento. Pero también es un compromiso. Tomalo sólo si lo necesitás.</p>
-        <a class="text-xs 
-                font-bold 
-                text-black 
-                inline-flex 
-                items-center 
-                mt-2 
-                ml-20
-                hover:underline  
-                focus:underline
-                active:bg-gray-300
-                active:rounded" href="#">
-            <img class="mr-1" src="./assets/images/arrow-simple-next.svg" alt="arrow" width="16" height="16">
-            Conocé nuestra visión
-        </a>
+        
+        <div class="flex justify-center">
+            <a class="text-xs 
+                    font-bold 
+                    text-black 
+                    inline-flex 
+                    items-center 
+                    mt-2
+                    hover:underline  
+                    focus:underline
+                    active:bg-gray-300
+                    active:rounded" href="#">
+                <img class="mr-1" src="./assets/images/arrow-simple-next.svg" alt="arrow" width="16" height="16">
+                Conocé nuestra visión
+            </a>
+        </div>
+        
     </div>
 
     <!--WALLET-->
-    <div id="wallet" class="px-3 mt-22 text-center">
-        <h2 class="text-3xl font-bold">Tené tu cuenta virtual sin pasar por un banco.</h2>
-        <p class="text-base">Estamos construyendo la billetera Waynimóvil que puedas hacer lo mismo que en un banco pero simple y desde el celular.</p>
+    <div id="wallet" class="px-3 md:px-35 mt-22 text-center">
+
+        <span class="text-xs font-bold text-white bg-blue-500 px-2 py-1 rounded">PRÓXIMAMENTE</span>
+
+        <h2 class="text-3xl font-bold mt-5 leading-tight">Tené tu cuenta virtual sin pasar por un banco.</h2>
+        <p class="text-base mt-4">Estamos construyendo la billetera Waynimóvil que puedas hacer lo mismo que en un banco pero simple y desde el celular.</p>
         
         <div class="flex justify-center">
-            <img src="./assets/images/wallet-xs.svg" alt="wallet">
+            <img class="block lg:hidden" src="./assets/images/wallet-xs.svg" alt="wallet">
+            <img class="hidden lg:block" src="./assets/images/wallet-lg.svg" alt="wallet">
         </div>        
 
         <div class="flex justify-center">
@@ -303,19 +337,22 @@
     </div>
 
     <!--CARD-->
-    <div id="card" class="px-3 py-10 mt-22 text-white text-center bg-purple-900">        
+    <div id="card" class="px-3 md:px-35 py-10 mt-22 text-white text-center bg-purple-900">        
         <h2 class="text-3xl font-bold">Tu billetera viene con una tarjeta Visa</h2>
         <div class="flex justify-center">
-            <img src="./assets/images/visa-xs.svg" alt="visa">
+            <img class="hidden md:h-40 md:block z-0 mt-40" src="./assets/images/visa-yellow.svg" alt="visa">
+            <img class="block md:h-40  z-10" src="./assets/images/visa-green.svg" alt="visa">
+            <img class="hidden md:h-40 md:block z-0 mt-40" src="./assets/images/visa-white.svg" alt="visa">
         </div>
         <p class="text-xl">La vas a poder usar para hacer compras en cuotas por Internet o en cualquier lugar físico que acepte Visa 😉</p>
         <p class="text-xl mt-6">Dejanos tu email y enterate cuando esté lista!</p>
-        <input class="mt-6 
+        <input class="w-full
+                    sm:w-84
+                    mt-6 
                     shadow 
                     appearance-none 
                     border 
-                    rounded 
-                    w-full 
+                    rounded
                     py-4 
                     px-3 
                     text-gray-900 
@@ -325,7 +362,7 @@
     </div>
 
     <!--FAQ-->
-    <div id="faq" class="px-3 py-20">
+    <div id="faq" class="px-3 md:px-35 py-20">
         <h2 class="text-3xl font-bold text-center">¿Dudas?</h2>
         <h2 class="text-3xl mt-0 font-bold text-center">¿Necesitás más info?</h2>
         <p class="text-base mt-4 text-gray-900 text-center">Consultá las preguntas frecuentas</p>
@@ -372,40 +409,47 @@
 
         <h3 class="text-base text-center mt-6"><span class="font-bold">¿No encontraste lo que buscás?</span> No hay problema, podemos ayudarte </h3>
 
-        <button class="xs:w-full 
-                        mt-6
-                        bg-green-900
-                        text-white 
-                        text-base
-                        font-bold
-                        py-2 
-                        px-6 
-                        rounded-full
-                        focus:outline-none
-                        focus:shadow-outline-green
-                        hover:bg-purple-900
-                        hover:text-white
-                        active:bg-black
-                        active:text-white">
-            Explorá consultas frecuentes
-        </button>
+        <div class="flex justify-center">
+            <button class="w-full 
+                            sm:w-84
+                            mt-6
+                            bg-green-900
+                            text-white 
+                            text-base
+                            font-bold
+                            py-2 
+                            px-6 
+                            rounded-full
+                            focus:outline-none
+                            focus:shadow-outline-green
+                            hover:bg-purple-900
+                            hover:text-white
+                            active:bg-black
+                            active:text-white">
+                Explorá consultas frecuentes
+            </button>
+        </div>
+
     </div>
 
     <!--CTA-->
-    <div id="cta" class="px-3 py-10 bg-purple-900 text-center text-white">
+    <div id="cta" class="px-3 md:px-35 py-10 bg-purple-900 text-center text-white">
         <h2 class="text-4xl">Tenemos un préstamo para vos</h2>
 
-        <div class="flex mt-6">
-            <div class="inline-flex mr-2 items-start">
-                <img class="mt-1" src="./assets/images/bullet-check-green.svg" alt="bullet" width="16" height="16">
-            </div>
-            <div class="flex-auto text-left items-center">
-                <p class="text-xs">Pedilo 100% online, sin moverte de tu casa.</p>
-                <p class="text-xs">Te lo depositamos en tu cuenta en el día.</p>
+        <div class="flex justify-center">
+            <div class="flex mt-6">
+                <div class="inline-flex mr-2 items-start">
+                    <img class="mt-1" src="./assets/images/bullet-check-green.svg" alt="bullet" width="16" height="16">
+                </div>
+                <div class="flex-auto text-left items-center">
+                    <p class="text-xs">Pedilo 100% online, sin moverte de tu casa.</p>
+                    <p class="text-xs">Te lo depositamos en tu cuenta en el día.</p>
+                </div>
             </div>
         </div>
 
-        <button class="xs:w-full 
+        <button class="w-full
+                        sm:w-84 
                         mt-6
                         bg-green-900 
                         text-white 
@@ -425,7 +469,7 @@
     </div>
 
     <!--FOOTER-->
-    <div id="footer" class="bg-green-900 text-white px-3 py-10">
+    <div id="footer" class="bg-green-900 text-white px-3 md:px-35 py-10">
         <div class="flex justify-center">
             <img src="./assets/images/wayni-logo-white.svg" alt="logo">
         </div>
@@ -456,10 +500,10 @@
         <div>
             <p class="text-xs text-gray-900">(*)Tasa de Interés Nominal Anual (TNA) = 99% Tasa de Interés Efectiva Anual (TEA) = 159.03%. La tasa de interés es fija (valores sin iva). CFT(NA): 337.18%. <br> El período máximo de repago son 180 días, todos tienen la opción de repago mínimo de 90 días.</p>
         </div>
-        <div class="flex justify-between mt-8">
-            <img src="./assets/images/legal-1.svg" alt="legal">
-            <img src="./assets/images/legal-2.svg" alt="legal">
-            <img src="./assets/images/legal-3.svg" alt="legal">
+        <div class="flex justify-between sm:justify-center mt-8">
+            <img class="sm:mr-2" src="./assets/images/legal-1.svg" alt="legal">
+            <img class="sm:mr-2" src="./assets/images/legal-2.svg" alt="legal">
+            <img class="sm:mr-2" src="./assets/images/legal-3.svg" alt="legal">
         </div>
     </div>
 
