@@ -6,7 +6,7 @@
     <title>Waynimovil Library UI</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="font-body bg-gray-100">
+<body class="font-body bg-gray-100 antialiased">
     <!-- HEADER -->
     <div id="header" class="w-full">
         
@@ -14,7 +14,42 @@
             <img src="./assets/images/wayni-logo-two-colors.svg" alt="Wayni Logo">
 
             <div class="flex items-center">
-                <div class="relative inline-block text-left">
+                <div class="dropdown inline-block relative">
+                    <button class="outline-none bg-purple-900 text-white font-semibold py-2 px-4 rounded-full inline-flex items-center">
+                      <span class="mr-1">Explorar</span>
+                      <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+                    </button>
+
+                    <div class="dropdown-menu absolute hidden origin-top-right right-0 mt-2 w-56 rounded-md shadow-lg">
+                        <div class="rounded-md bg-white shadow-xs">
+                            <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                            <a href="#tipography" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900" role="menuitem">Tipografía</a>
+                            <a href="#colors" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900" role="menuitem">Colores</a>
+                            <a href="#icons" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900" role="menuitem">Iconos</a>
+                            <a href="#buttons" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900" role="menuitem">Botonos</a>
+                            <a href="#inputs" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900" role="menuitem">Form Inputs</a>
+                            <a href="#menu" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900" role="menuitem">Menu</a>                          
+                            <hr>
+                            <a href="./landing.html" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900" role="menuitem">LandingPage</a>                          
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <!--<ul class="dropdown-menu absolute hidden bg-gray-300 text-gray-700 pt-1">
+                      <li><a href="#tipography" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900" role="menuitem">Tipografía</a></li>
+                      <li><a href="#colors" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900" role="menuitem">Colores</a></li>
+                      <li><a href="#icons" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900" role="menuitem">Iconos</a></li>
+                      <li><a href="#buttons" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900" role="menuitem">Botonos</a></li>
+                      <li><a href="#inputs" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900" role="menuitem">Form Inputs</a></li>
+                      <li><a href="#menu" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900" role="menuitem">Menu</a></li>
+                    </ul>-->
+
+                  </div>
+
+                <!--<div class="relative inline-block text-left">
                     <div>
                       <span class="rounded-md shadow-sm">
                         <button type="button" class="xs:px-4 xs:py-2 sm:px-8 sm:py-3 inline-flex justify-center w-full rounded-full border border-gray-300 text-white bg-purple-900 text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition ease-in-out duration-150" id="options-menu" aria-haspopup="true" aria-expanded="true">
@@ -24,7 +59,7 @@
                           </svg>
                         </button>
                       </span>
-                    </div>
+                    </div>-->
                   
                     <!--
                       Dropdown panel, show/hide based on dropdown state.
@@ -36,7 +71,7 @@
                         From: "transform opacity-100 scale-100"
                         To: "transform opacity-0 scale-95"
                     -->
-                    <div class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg">
+                    <!--<div class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg">
                       <div class="rounded-md bg-white shadow-xs">
                         <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                           <a href="#tipography" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900" role="menuitem">Tipografía</a>
@@ -47,7 +82,7 @@
                           <a href="#menu" class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900" role="menuitem">Menu</a>                          
                         </div>
                       </div>
-                    </div>
+                    </div>-->
                   </div>
             </div>
         </div>     
@@ -531,7 +566,7 @@
                     <p class="text-base">Big Fill</p>
                 </div>
                 <div class="box-content px-6 py-6">
-                    <button class="bg-green-900 hover:bg-green-100 text-white py-3 px-8 rounded-full">
+                    <button class="bg-green-900 hover:bg-green-100 text-white py-3 px-8 rounded-full active:outline-none">
                         Label
                     </button>
                 </div>
@@ -656,7 +691,7 @@
                 </div>
                 <div class="box-content px-6 py-6">
                     <button class="w-px-300 bg-red-900 hover:bg-red-100 text-white font-bold py-3 pl-6 rounded-full inline-flex">
-                        <img class="mr-6 fill-white" src="./assets/images/google-white.svg" alt="google" width="20" height="20">
+                        <img class="mr-6" src="./assets/images/google-white.svg" alt="google" width="20" height="20">
                         Ingresá con Google
                     </button>
                 </div>
@@ -692,16 +727,22 @@
                     <p class="text-base">Text Input</p>
                 </div>
                 <div class="box-content px-6 py-6">
-                    <input class="bg-gray-300
+                    <input class="appearance-none 
+                                block 
+                                w-64 
+                                bg-gray-300 
+                                text-gray-700 
+                                border 
+                                border-gray-200 
                                 rounded 
-                                w-64
-                                h-12 
-                                py-2 
-                                px-3 
-                                text-black
-                                leading-tight"                          
-                            type="text" 
-                            placeholder="DNI o Email">
+                                py-3 
+                                px-4 
+                                leading-tight 
+                                focus:outline-none 
+                                focus:bg-white 
+                                focus:border-gray-500"
+                                type="text" 
+                                placeholder="DNI o Email">
                 </div>
             </div>
 
