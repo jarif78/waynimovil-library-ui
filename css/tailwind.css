@@ -4,6 +4,27 @@
 
 @tailwind components;
 
+.banner {
+    @apply bg-blue-900 border border-blue-900 text-white px-4 py-3 relative;
+}
+
+.button-green {
+    @apply w-full bg-green-900 text-white text-base font-bold py-2 px-6 rounded-full;
+     
+}
+
+.button-green:focus {
+    @apply outline-none shadow-outline-green;
+}
+
+.button-green:hover {
+    @apply bg-purple-900 text-white;
+}
+
+.button-green:active {
+    @apply bg-black text-white;
+}
+
 @tailwind utilities;
 
 .dropdown:hover .dropdown-menu {

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "postcss css/tailwind.css -o public/assets/css/styles.css"
+    "build": "postcss css/tailwind.css -o public/assets/css/styles.css",
+    "watch": "watch 'npm run build'"
   },
   "keywords": [],
   "author": "ARiel Fernández",
@@ -12,7 +13,13 @@
   "dependencies": {
     "@tailwindcss/ui": "^0.3.0",
     "autoprefixer": "^9.8.4",
+    "npm-watch": "^0.6.0",
     "postcss-cli": "^7.1.1",
-    "tailwindcss": "^1.4.6"
+    "tailwindcss": "^1.4.6",
+    "watch": "^1.0.2"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "cssnano": "^4.1.10"
   }
 }

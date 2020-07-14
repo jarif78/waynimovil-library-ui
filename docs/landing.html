@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Waynimovil - LandingPage</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.4.1/dist/alpine.min.js" defer></script>
 </head>
 <body class="antialiased">
 
@@ -76,21 +77,8 @@
             <h1 class="mt-8 mb-6 text-black text-4xl lg:text-5xl font-bold leading-tight text-center">Tenemos un préstamos para vos</h1>
 
             <div class="flex justify-center">
-                <button class="w-full 
-                                sm:w-84
-                                bg-green-900 
-                                text-white 
-                                text-base
-                                font-bold
-                                py-2 
-                                px-6 
-                                rounded-full
-                                focus:outline-none
-                                focus:shadow-outline-green
-                                hover:bg-purple-900
-                                hover:text-white
-                                active:bg-black
-                                active:text-white">
+                <button class="button-green
+                                sm:w-84">
                     ¡Solicitá tu préstamo!
                 </button>
             </div>
@@ -305,66 +293,139 @@
     </div>
 
     <!--WALLET-->
-    <div id="wallet" class="px-3 md:px-35 mt-22 text-center">
+    <div id="wallet">
 
-        <span class="text-xs font-bold text-white bg-blue-500 px-2 py-1 rounded">PRÓXIMAMENTE</span>
-
-        <h2 class="text-3xl font-bold mt-5 leading-tight">Tené tu cuenta virtual sin pasar por un banco.</h2>
-        <p class="text-base mt-4">Estamos construyendo la billetera Waynimóvil que puedas hacer lo mismo que en un banco pero simple y desde el celular.</p>
-        
-        <div class="flex justify-center">
-            <img class="block lg:hidden" src="./assets/images/wallet-xs.svg" alt="wallet">
-            <img class="hidden lg:block" src="./assets/images/wallet-lg.svg" alt="wallet">
-        </div>        
-
-        <div class="flex justify-center">
-            <img class="mt-7 object-none object-center" src="./assets/images/wallet-1.svg" alt="icon">
+        <div class="lg:hidden px-3 md:px-35 mt-22 text-center">
+            <span class="text-xs font-bold text-white bg-blue-500 px-2 py-1 rounded">PRÓXIMAMENTE</span>
+    
+            <h2 class="text-3xl font-bold mt-5 leading-tight">Tené tu cuenta virtual sin pasar por un banco.</h2>
+            <p class="text-base mt-4">Estamos construyendo la billetera Waynimóvil que puedas hacer lo mismo que en un banco pero simple y desde el celular.</p>
+            
+            <div class="flex justify-center">
+                <img class="block lg:hidden" src="./assets/images/wallet-xs.svg" alt="wallet">
+                <img class="hidden lg:block" src="./assets/images/wallet-lg.svg" alt="wallet">
+            </div>        
+    
+            <div class="flex justify-center">
+                <img class="mt-7 object-none object-center" src="./assets/images/wallet-1.svg" alt="icon">
+            </div>
+            <h3 class="text-xl font-bold mt-4">Enviá y recibí dinero</h3>
+            <p class="text-base mt-2 text-gray-900">Vas a poder enviar y recibir dinero, hacer transferencias desde tu celular a cualquier persona con solo pasarle tu CVU</p>
+    
+            <div class="flex justify-center">
+                <img class="mt-7" src="./assets/images/wallet-2.svg" alt="icon">
+            </div>        
+            <h3 class="text-xl font-bold mt-4">Pagá servicios desde el celular</h3>
+            <p class="text-base mt-2 text-gray-900">Vas a poder pagar servicios con tal solo scanear el código QR o cargar la SUBE. </p>
+    
+            <div class="flex justify-center">
+                <img class="mt-7" src="./assets/images/wallet-3.svg" alt="icon">
+            </div>        
+            <h3 class="text-xl font-bold mt-4">¿Necesitás una mano extra? Solicitá tu préstamo desde la billetera</h3>
+            <p class="text-base mt-2 text-gray-900">Sin papeles, sin validaciones extra. En un sólo click.</p>
         </div>
-        <h3 class="text-xl font-bold mt-4">Enviá y recibí dinero</h3>
-        <p class="text-base mt-2 text-gray-900">Vas a poder enviar y recibir dinero, hacer transferencias desde tu celular a cualquier persona con solo pasarle tu CVU</p>
 
-        <div class="flex justify-center">
-            <img class="mt-7" src="./assets/images/wallet-2.svg" alt="icon">
-        </div>        
-        <h3 class="text-xl font-bold mt-4">Pagá servicios desde el celular</h3>
-        <p class="text-base mt-2 text-gray-900">Vas a poder pagar servicios con tal solo scanear el código QR o cargar la SUBE. </p>
+        <div class="hidden lg:block px-12 mt-22">
+            <div class="flex flex-wrap">
 
-        <div class="flex justify-center">
-            <img class="mt-7" src="./assets/images/wallet-3.svg" alt="icon">
-        </div>        
-        <h3 class="text-xl font-bold mt-4">¿Necesitás una mano extra? Solicitá tu préstamo desde la billetera</h3>
-        <p class="text-base mt-2 text-gray-900">Sin papeles, sin validaciones extra. En un sólo click.</p>
+                <div class="w-1/2">
+                    <span class="text-xs font-bold text-white bg-blue-500 px-2 py-1 rounded">PRÓXIMAMENTE</span>
+    
+                    <h2 class="text-3xl font-bold mt-5 leading-tight">Tené tu cuenta virtual sin pasar por un banco.</h2>
+                    <p class="text-base mt-4">Estamos construyendo la billetera Waynimóvil que puedas hacer lo mismo que en un banco pero simple y desde el celular.</p>     
+            
+                    <div class="flex justify-center">
+                        <img class="mt-7 object-none object-center" src="./assets/images/wallet-1.svg" alt="icon">
+                    </div>
+                    <h3 class="text-xl font-bold mt-4">Enviá y recibí dinero</h3>
+                    <p class="text-base mt-2 text-gray-900">Vas a poder enviar y recibir dinero, hacer transferencias desde tu celular a cualquier persona con solo pasarle tu CVU</p>
+            
+                    <div class="flex justify-center">
+                        <img class="mt-7" src="./assets/images/wallet-2.svg" alt="icon">
+                    </div>        
+                    <h3 class="text-xl font-bold mt-4">Pagá servicios desde el celular</h3>
+                    <p class="text-base mt-2 text-gray-900">Vas a poder pagar servicios con tal solo scanear el código QR o cargar la SUBE. </p>
+            
+                    <div class="flex justify-center">
+                        <img class="mt-7" src="./assets/images/wallet-3.svg" alt="icon">
+                    </div>        
+                    <h3 class="text-xl font-bold mt-4">¿Necesitás una mano extra? Solicitá tu préstamo desde la billetera</h3>
+                    <p class="text-base mt-2 text-gray-900">Sin papeles, sin validaciones extra. En un sólo click.</p>
+                </div>
+
+                <div class="w-1/2 flex justify-end">
+                        <img src="./assets/images/wallet-lg.svg" alt="wallet"> 
+                </div>
+
+            </div>
+        </div>
+
+
     </div>
 
     <!--CARD-->
-    <div id="card" class="px-3 md:px-35 py-10 mt-22 text-white text-center bg-purple-900">        
-        <h2 class="text-3xl font-bold">Tu billetera viene con una tarjeta Visa</h2>
-        <div class="flex justify-center">
-            <img class="hidden md:h-40 md:block z-0 mt-40" src="./assets/images/visa-yellow.svg" alt="visa">
-            <img class="block md:h-40  z-10" src="./assets/images/visa-green.svg" alt="visa">
-            <img class="hidden md:h-40 md:block z-0 mt-40" src="./assets/images/visa-white.svg" alt="visa">
+    <div id="card" class="px-3 md:px-35 lg:px-12 py-10 mt-22 text-white text-center bg-purple-900">  
+        
+        <div class="lg:hidden">
+            <h2 class="text-3xl font-bold">Tu billetera viene con una tarjeta Visa</h2>
+            <div class="flex justify-center">
+                <img class="hidden md:h-40 md:block z-0 mt-40" src="./assets/images/visa-yellow.svg" alt="visa">
+                <img class="block md:h-40  z-10" src="./assets/images/visa-green.svg" alt="visa">
+                <img class="hidden md:h-40 md:block z-0 mt-40" src="./assets/images/visa-white.svg" alt="visa">
+            </div>
+            <p class="text-xl">La vas a poder usar para hacer compras en cuotas por Internet o en cualquier lugar físico que acepte Visa 😉</p>
+            <p class="text-xl mt-6">Dejanos tu email y enterate cuando esté lista!</p>
+            <input class="w-full
+                        sm:w-84
+                        mt-6 
+                        shadow 
+                        appearance-none 
+                        border 
+                        rounded
+                        py-4 
+                        px-3 
+                        text-gray-900 
+                        leading-tight 
+                        focus:outline-none 
+                        focus:shadow-outline-gray" type="text" placeholder="Tu email...">
         </div>
-        <p class="text-xl">La vas a poder usar para hacer compras en cuotas por Internet o en cualquier lugar físico que acepte Visa 😉</p>
-        <p class="text-xl mt-6">Dejanos tu email y enterate cuando esté lista!</p>
-        <input class="w-full
-                    sm:w-84
-                    mt-6 
-                    shadow 
-                    appearance-none 
-                    border 
-                    rounded
-                    py-4 
-                    px-3 
-                    text-gray-900 
-                    leading-tight 
-                    focus:outline-none 
-                    focus:shadow-outline-gray" type="text" placeholder="Tu email...">
+
+        <div class="hidden lg:block">
+            <div class="flex flex-wrap">            
+                    <div id="card" class="w-full lg:w-1/2">
+                        <div class="flex justify-center items-center">
+                            <img class="w-full h-84 object-cover" src="./assets/images/visa-green.svg" alt="visa">
+                        </div>
+                    </div>
+                    <div id="info" class="w-full lg:w-1/2">
+                        <h2 class="text-4xl font-bold text-left">Tu billetera viene con una tarjeta Visa</h2>
+                        <p class="text-2xl text-left mt-4">La vas a poder usar para hacer compras en cuotas por Internet o en cualquier lugar físico que acepte Visa 😉</p>
+                        <input class="w-full
+                                    sm:w-84
+                                    lg:w-full
+                                    mt-6
+                                    lg:mt-10 
+                                    shadow 
+                                    appearance-none 
+                                    border 
+                                    rounded
+                                    py-4 
+                                    px-3 
+                                    text-gray-900 
+                                    leading-tight 
+                                    focus:outline-none 
+                                    focus:shadow-outline-gray" type="text" placeholder="Dejanos tu email y enterate cuando esté lista!">
+                    </div>
+            </div>
+        </div>
     </div>
 
     <!--FAQ-->
     <div id="faq" class="px-3 md:px-35 py-20">
-        <h2 class="text-3xl font-bold text-center">¿Dudas?</h2>
-        <h2 class="text-3xl mt-0 font-bold text-center">¿Necesitás más info?</h2>
+        <h2 class="sm:hidden text-3xl font-bold text-center">¿Dudas?</h2>
+        <h2 class="sm:hidden text-3xl mt-0 font-bold text-center">¿Necesitás más info?</h2>
+
+        <h2 class="hidden sm:block text-3xl xl:text-5xl font-bold text-center">¿Dudas? ¿Necesitás más info?</h2>
         <p class="text-base mt-4 text-gray-900 text-center">Consultá las preguntas frecuentas</p>
 
         <hr>
@@ -436,7 +497,7 @@
     <div id="cta" class="px-3 md:px-35 py-10 bg-purple-900 text-center text-white">
         <h2 class="text-4xl">Tenemos un préstamo para vos</h2>
 
-        <div class="flex justify-center">
+        <div class="flex justify-center lg:hidden">
             <div class="flex mt-6">
                 <div class="inline-flex mr-2 items-start">
                     <img class="mt-1" src="./assets/images/bullet-check-green.svg" alt="bullet" width="16" height="16">
@@ -446,6 +507,32 @@
                     <p class="text-xs">Te lo depositamos en tu cuenta en el día.</p>
                 </div>
             </div>
+        </div>
+
+        <div class="hidden lg:block">
+            <ul class="flex justify-center text-white text-xs">
+                <li class="mr-6">
+                    <a href="#">
+                        <div class="inline-flex mr-2 items-center">
+                            <img class="mt-1" src="./assets/images/bullet-check-green.svg" alt="bullet" width="16" height="16">
+                        </div>
+                        100% online</a>
+                </li>
+                <li class="mr-6">
+                    <a href="#">
+                        <div class="inline-flex mr-2 items-start">
+                            <img class="mt-1" src="./assets/images/bullet-check-green.svg" alt="bullet" width="16" height="16">
+                        </div>
+                        Sin moverte de tu casa</a>
+                </li>
+                <li class="mr-6">
+                    <a href="#">
+                        <div class="inline-flex mr-2 items-start">
+                            <img class="mt-1" src="./assets/images/bullet-check-green.svg" alt="bullet" width="16" height="16">
+                        </div>
+                        ¡Te lo otorgamos en el día!</a>
+                </li>
+            </ul>
         </div>
 
         <button class="w-full
@@ -469,14 +556,15 @@
     </div>
 
     <!--FOOTER-->
-    <div id="footer" class="bg-green-900 text-white px-3 md:px-35 py-10">
-        <div class="flex justify-center">
+    <div id="footer" class="flex flex-wrap bg-green-900 text-white px-3 md:px-35 lg:px-12 py-10">
+        <div class="w-full flex justify-center lg:w-1/2 lg:justify-start">
             <img src="./assets/images/wayni-logo-white.svg" alt="logo">
         </div>
-        <div class="mt-7">
+        <div class="w-full mt-7 lg:w-1/2">
             <ul class="text-base 
                         font-bold 
                         text-center
+                        lg:text-left
                         leading-loose">
 
                 <li><a class="hover:underline  
@@ -496,14 +584,16 @@
     </div>
 
     <!--LEGAL-->
-    <div id="legal" class="px-6 py-10">
-        <div>
-            <p class="text-xs text-gray-900">(*)Tasa de Interés Nominal Anual (TNA) = 99% Tasa de Interés Efectiva Anual (TEA) = 159.03%. La tasa de interés es fija (valores sin iva). CFT(NA): 337.18%. <br> El período máximo de repago son 180 días, todos tienen la opción de repago mínimo de 90 días.</p>
-        </div>
-        <div class="flex justify-between sm:justify-center mt-8">
-            <img class="sm:mr-2" src="./assets/images/legal-1.svg" alt="legal">
-            <img class="sm:mr-2" src="./assets/images/legal-2.svg" alt="legal">
-            <img class="sm:mr-2" src="./assets/images/legal-3.svg" alt="legal">
+    <div id="legal" class="px-6 lg:px-12 py-10 lg:py-16">
+        <div class="flex flex-wrap">
+            <div class="w-full lg:w-2/3 lg:items-start">
+                <p class="text-xs text-gray-900">(*)Tasa de Interés Nominal Anual (TNA) = 99% Tasa de Interés Efectiva Anual (TEA) = 159.03%. La tasa de interés es fija (valores sin iva). CFT(NA): 337.18%. <br> El período máximo de repago son 180 días, todos tienen la opción de repago mínimo de 90 días.</p>
+            </div>
+            <div class="w-full lg:w-1/3 flex justify-between sm:justify-center mt-8 lg:items-start lg:mt-0">
+                <img class="sm:mr-2" src="./assets/images/legal-1.svg" alt="legal">
+                <img class="sm:mr-2" src="./assets/images/legal-2.svg" alt="legal">
+                <img class="sm:mr-2" src="./assets/images/legal-3.svg" alt="legal">
+            </div>
         </div>
     </div>
 
