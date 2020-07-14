@@ -13,7 +13,7 @@
     <div id="banner">
         <div class="bg-blue-900 border border-blue-900 text-white px-4 py-3 relative" role="alert">
             <strong class="font-bold">COVID-19</strong>
-            <span class="block sm:inline">El Corona virus nos está afectando a todos. Conocé qué recaudos podés tomar. Leer mas.</span>
+            <span class="block sm:inline">El Corona virus nos está afectando a todos. Conocé qué recaudos podés tomar. Leer más.</span>
             <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
                 <svg class="fill-current h-6 w-6 text-white" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
             </span>
@@ -80,17 +80,17 @@
 
     <!--HERO-->
     <div id="hero" class="flex flex-wrap">
-        <div id="info" class="w-full lg:w-1/2 px-3 lg:mt-35">
-            <h1 class="mt-8 mb-6 text-black text-4xl lg:text-5xl font-bold leading-tight text-center">Tenemos un préstamos para vos</h1>
+        <div id="info" class="w-full lg:w-1/2 lg:mt-35 px-3 lg:px-12 xl:px-26">
+            <h1 class="mt-8 mb-6 text-black text-4xl lg:text-5xl font-bold leading-tight text-center lg:text-left">Tenemos un préstamos para vos</h1>
 
-            <div class="flex justify-center">
+            <div class="flex justify-center lg:justify-start">
                 <button class="button-green
                                 sm:w-84">
                     ¡Solicitá tu préstamo!
                 </button>
             </div>
 
-            <div class="flex justify-center">
+            <div class="flex justify-center lg:hidden">
                 <button class="w-full 
                                 sm:w-84
                                 mt-6 
@@ -114,7 +114,7 @@
                 </button>
             </div>
 
-            <div class="flex justify-center">
+            <div class="flex justify-center lg:justify-start">
                 <div class="flex mt-6">
                     <div class="inline-flex mr-2 items-start">
                         <img class="mt-1" src="./assets/images/bullet-check-green.svg" alt="bullet" width="16" height="16">
@@ -126,18 +126,20 @@
                 </div>
             </div>
 
-            <div class="flex justify-center">
-                <div class="mt-2 mb-6 ml-20">
+            <div class="flex justify-center lg:justify-start">
+                <div class="mt-2 mb-6 lg:ml-6">
                     <a class="text-xs 
                             font-bold 
                             text-black 
+                            lg:text-green-900
                             inline-flex 
                             items-center
                             hover:underline  
                             focus:underline
                             active:bg-gray-300
                             active:rounded" href="#">
-                        <img class="mr-1" src="./assets/images/arrow-simple-next.svg" alt="arrow" width="16" height="16">
+                        <img class="mr-1 lg:hidden" src="./assets/images/arrow-simple-next.svg" alt="arrow" width="16" height="16">
+                        <img class="mr-1 hidden lg:block" src="./assets/images/arrow-simple-next-green.svg" alt="arrow" width="6" height="6">
                         Conocé los requisitos
                     </a>
                 </div>
