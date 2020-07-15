@@ -10,24 +10,23 @@
 <body class="antialiased">
 
     <!--BANNER-->
-    <div id="banner" class="px-3 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95 bg-blue-900">
-        <div class="border border-blue-900 text-white py-3 relative" role="alert">
-            <strong class="font-bold">COVID-19</strong>
-            <span class="block lg:inline">El Corona virus nos está afectando a todos. Conocé qué recaudos podés tomar. Leer más.</span>
-            <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
-                <svg class="fill-current h-6 w-6 text-white" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
-            </span>
+    <div id="banner" class="px-3 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95 py-3 bg-blue-900">
+        <div class="flex">
+            <div class="w-full text-white">
+                <strong class="font-bold">COVID-19</strong>
+                <p class="inline sm:block lg:inline">El Corona virus nos está afectando a todos. Conocé qué recaudos podés tomar. </p><a href="#">Leer más.</a>
+            </div>
+            <div class="flex justify-end">
+                <svg class="fill-current h-6 w-6 text-white justify-end" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
+            </div>
         </div>
     </div>
 
     <!--HEADER-->
     <div id="header">
-        <div class="w-full xs:h-16 lg:h-22 px-3 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95 flex items-center justify-between shadow-header">                        
-            
-            <img class="object-contain xs:h-6 sm:h-7 md:h-8 lg:h-10" src="./assets/images/wayni-logo-two-colors.svg" alt="logo">
-            
+        <div class="w-full xs:h-16 lg:h-22 px-3 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95 flex items-center justify-between shadow-header"> 
+            <img class="object-contain xs:h-6 sm:h-7 md:h-8 lg:h-10" src="./assets/images/wayni-logo-two-colors.svg" alt="logo">            
             <div class="flex items-center">
-
                 <span class="mr-4 xs:hidden lg:block">¿Ya sos usuario?</span>                        
 
                 <a class="mr-4 text-base font-bold text-purple-900 xs:hidden lg:block" href="#">
@@ -80,8 +79,8 @@
 
     <!--HERO-->
     <div id="hero" class="flex flex-wrap px-3 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95">
-        <div id="info" class="w-full lg:w-1/2 lg:mt-35">
-            <h1 class="mt-8 mb-6 text-black text-4xl lg:text-5xl font-bold leading-tight text-center lg:text-left">Tenemos un préstamos para vos</h1>
+        <div id="info" class="w-full lg:w-1/2 3xl:w-7/12 lg:mt-35">
+            <h1 class="mt-8 lg:mt-0 mb-6 text-black text-4xl lg:text-5xl 3xl:text-6xl font-bold leading-none text-center lg:text-left">Tenemos un préstamos para vos</h1>
 
             <div class="flex justify-center lg:justify-start">
                 <button class="button-green
@@ -146,7 +145,7 @@
             </div>            
         </div>
 
-        <div id="image" class="w-full lg:w-1/2 flex justify-center lg:mt-20">
+        <div id="image" class="w-full lg:w-1/2 3xl:w-5/12 flex justify-center lg:justify-end lg:mt-20">
             <img class="xs:block lg:hidden" src="./assets/images/hero-xs.svg" alt="hero">
             <img class="xs:hidden lg:block" src="./assets/images/hero-lg.svg" alt="hero">
         </div>
@@ -156,7 +155,8 @@
     <div id="proposal" class="mt-32 px-3 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95">
         <h2 class="text-3xl font-bold text-center lg:hidden">Pedir un préstamo en Waynimovil es simple:</h2>
 
-        <div class="lg:flex lg:flex-wrap px-3 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95">
+        <div class="lg:flex lg:flex-wrap">
+            
             <div class="flex justify-center items-center lg:w-1/2">
                 <div id="proposal-image">
                     <img class="xs:block sm:hidden xl:hidden" src="./assets/images/proposal-xs.svg" alt="proposal">
@@ -216,7 +216,10 @@
         <div class="flex flex-wrap mt-6">
 
             <div class="flex justify-center lg:flex-1 lg:items-start w-full">
-                <div class="relative w-full sm:w-120 lg:w-74 h-84 sm:h-66 lg:h-95 bg-purple-900 text-white p-6 rounded rounded-bl-2xl shadow-2xl">
+                <div class="relative 
+                w-full sm:w-122 lg:w-73 xl:w-96 2xl:w-96 3xl:w-96
+                h-76 md:h-66 lg:h-95 xl:h-100 2xl:h-100 3xl:h-100
+                bg-purple-900 text-white p-6 rounded rounded-bl-2xl shadow-2xl">
                     <h4 class="text-2xl font-bold w-2/3">Es un préstamo para todos</h4>
                     <p class="text-base mt-6">Los requisitos son mínimos para que todos puedan acceder a un préstamo Waynimóvil: sólo necesitás validar tu identidad, y tener una cuenta bancaria.</p>
                     
@@ -227,7 +230,10 @@
             </div>
 
             <div class="flex justify-center lg:flex-1 lg:items-start w-full">
-                <div class="relative w-full sm:w-120 lg:w-74 h-84 sm:h-66 lg:h-95 bg-white mt-6 lg:mt-0 p-6 border rounded rounded-br-2xl shadow-2xl">
+                <div class="relative 
+                w-full sm:w-122 lg:w-73 xl:w-96 2xl:w-96 3xl:w-96
+                h-76 md:h-66 lg:h-95 xl:h-100 2xl:h-100 3xl:h-100
+                bg-white mt-6 lg:mt-0 p-6 border rounded rounded-br-2xl shadow-2xl">
                     <h4 class="text-2xl text-green-900 font-bold w-2/3">Queremos verte crecer</h4>
                     <p class="text-base mt-6">Te ayudamos a crear un historial crediticio para que puedas acceder cada vez a mejores oportunidades de préstamo. No solo con nosotros, sino en todo el ecosistema financiero.</p>
                     <a class="text-base 
@@ -250,7 +256,10 @@
             </div>
 
             <div class="flex justify-center lg:flex-1 lg:items-start w-full">
-                <div class="relative w-full sm:w-120 lg:w-74 h-84 sm:h-66 lg:h-95 bg-green-900 text-white mt-6 lg:mt-0 p-6 rounded rounded-tr-2xl shadow-2xl">
+                <div class="relative 
+                w-full sm:w-122 lg:w-73 xl:w-96 2xl:w-96 3xl:w-96
+                h-76 md:h-66 lg:h-95 xl:h-100 2xl:h-100 3xl:h-100
+                bg-green-900 text-white mt-6 lg:mt-0 p-6 rounded rounded-tr-2xl shadow-2xl">
                     <h4 class="text-2xl font-bold w-2/3">Estamos disponibles</h4>
                     <p class="text-base mt-6">Si tenés consultas, necesitás ayuda para operar en línea o simplemente preferís hablar con un humano no hay problema: hay un asesor que puede seguir tu caso de cerca.</p>
                     <div class="absolute top-64 sm:top-48 lg:top-75 right-6">
