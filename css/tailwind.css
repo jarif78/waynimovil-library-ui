@@ -8,20 +8,20 @@
     @apply bg-blue-900 border border-blue-900 text-white px-4 py-3 relative;
 }
 
-.button-green {
-    @apply w-full bg-green-900 text-white text-base font-bold py-2 px-6 rounded-full;
+.btn-big-fill {
+    @apply w-full bg-green-900 text-base text-white font-bold py-3 px-8 rounded-full;
      
 }
 
-.button-green:focus {
+.btn-big-fill:focus {
     @apply outline-none shadow-outline-green;
 }
 
-.button-green:hover {
+.btn-big-fill:hover {
     @apply bg-purple-900 text-white;
 }
 
-.button-green:active {
+.btn-big-fill:active {
     @apply bg-black text-white;
 }
 
