@@ -11,8 +11,7 @@
 
 /* BTN BIG FILL */
 .btn-big-fill {
-    @apply w-full bg-green-900 text-base text-white font-bold py-3 px-8 rounded-full;
-     
+    @apply bg-green-900 text-base text-white font-bold py-3 px-8 rounded-full;
 }
 .btn-big-fill:focus {
     @apply outline-none shadow-outline-green;
@@ -26,8 +25,7 @@
 
 /* BTN BIG OUTLINE */
 .btn-big-outline {
-    @apply w-full bg-transparent text-base text-black font-bold py-3 px-8 border border-gray-500 rounded-full;
-     
+    @apply bg-transparent text-base text-black font-bold py-3 px-8 border border-gray-500 rounded-full;
 }
 .btn-big-outline:focus {
     @apply outline-none shadow-outline-gray;
@@ -38,6 +36,35 @@
 .btn-big-outline:active {
     @apply bg-black text-white;
 }
+
+/* BTN MEDIUM FILL */
+.btn-medium-fill {
+    @apply bg-green-900 text-xs text-white font-bold py-2 px-6 rounded-full;
+}
+.btn-medium-fill:focus {
+    @apply outline-none shadow-outline-green;
+}
+.btn-medium-fill:hover {
+    @apply bg-purple-900 text-white;
+}
+.btn-medium-fill:active {
+    @apply bg-black text-white;
+}
+
+/* BTN MEDIUM OUTLINE */
+.btn-medium-outline {
+    @apply bg-transparent text-xs text-black font-bold py-2 px-6 border border-gray-500 rounded-full;
+}
+.btn-medium-outline:focus {
+    @apply outline-none shadow-outline-gray;
+}
+.btn-medium-outline:hover {
+    @apply border-transparent bg-purple-900 text-white;
+}
+.btn-medium-outline:active {
+    @apply bg-black text-white;
+}
+
 
 @tailwind utilities;
 
