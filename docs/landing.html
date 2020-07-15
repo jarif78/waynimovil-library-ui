@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.4.1/dist/alpine.min.js" defer></script>
 </head>
-<body class="font-body antialiased">
+<body class="font-body bg-gray-100 antialiased">
 
     <!--BANNER-->
     <div id="banner" class="px-3 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95 py-3 bg-blue-900">
@@ -333,11 +333,13 @@
         
         <div class="lg:hidden">
             <h2 class="text-3xl font-bold">Tu billetera viene con una tarjeta Visa</h2>
-            <div class="flex justify-center">
-                <img class="hidden md:h-40 md:block z-0 mt-40" src="./assets/images/visa-yellow.svg" alt="visa">
-                <img class="block md:h-40  z-10" src="./assets/images/visa-green.svg" alt="visa">
-                <img class="hidden md:h-40 md:block z-0 mt-40" src="./assets/images/visa-white.svg" alt="visa">
+            
+            <div class="flex relative h-54 sm:h-84 md:h-75">
+                <img class="absolute hidden md:h-54 md:w-83 z-10 md:block ml-1 mt-20" src="./assets/images/visa-yellow.svg" alt="visa">
+                <img class="absolute block md:h-54 md:w-83 z-20 md:ml-48 md:mt-5" src="./assets/images/visa-green.svg" alt="visa">
+                <img class="absolute hidden md:h-54 md:w-83 z-10 md:block ml-100 mt-20" src="./assets/images/visa-white.svg" alt="visa">
             </div>
+            
             <p class="text-xl">La vas a poder usar para hacer compras en cuotas por Internet o en cualquier lugar físico que acepte Visa 😉</p>
             <p class="text-xl mt-6">Dejanos tu email y enterate cuando esté lista!</p>
             <input class="w-full
@@ -356,13 +358,13 @@
         </div>
 
         <div class="hidden lg:block">
-            <div class="flex flex-wrap">            
-                    <div id="card" class="w-full lg:w-1/2">
-                        <div class="flex justify-center items-center">
-                            <img class="w-full h-84 object-cover" src="./assets/images/visa-green.svg" alt="visa">
-                        </div>
+            <div class="flex flex-wrap xl:h-120">            
+                    <div id="card" class="lg:w-1/2 xl:h-120 relative">
+                        <img class="absolute z-10 lg:h-90 hidden xl:block  xl:-ml-90 xl:-mt-15 object-cover" src="./assets/images/visa-yellow.svg" alt="visa">
+                        <img class="absolute z-30 lg:h-90 lg:-ml-10 lg:-mt-2 xl:ml-10 xl:mt-20 object-cover" src="./assets/images/visa-green.svg" alt="visa">
+                        <img class="absolute z-20 lg:h-90 hidden xl:block xl:-ml-90 xl:mt-54 object-cover" src="./assets/images/visa-white.svg" alt="visa">
                     </div>
-                    <div id="info" class="w-full lg:w-1/2">
+                    <div id="info" class="lg:w-1/2 xl:h-120 items-center">
                         <h2 class="text-4xl font-bold text-left">Tu billetera viene con una tarjeta Visa</h2>
                         <p class="text-2xl text-left mt-4">La vas a poder usar para hacer compras en cuotas por Internet o en cualquier lugar físico que acepte Visa 😉</p>
                         <input class="w-full
