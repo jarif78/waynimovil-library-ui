@@ -13,11 +13,11 @@
     <div id="banner" x-data="{ isOpen: true }" x-show="isOpen" class="px-3 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95 py-3 bg-blue-900">
         <div class="flex">
             <div class="w-full text-white">
-                <strong class="font-bold">COVID-19</strong>
-                <p class="inline sm:block lg:inline">El Corona virus nos está afectando a todos. Conocé qué recaudos podés tomar. </p><a href="https://www.argentina.gob.ar/salud/coronavirus-COVID-19">Leer más.</a>
+                <strong class="text-xs font-bold">COVID-19 </strong>
+                <p class="text-xs inline">El Corona virus nos está afectando a todos. Conocé qué recaudos podés tomar. </p><a class="btn-text text-white" href="https://www.argentina.gob.ar/salud/coronavirus-COVID-19">Leer más.</a>
             </div>
             <div class="flex justify-end">
-                <svg x-on:click=" isOpen = !isOpen" class="fill-current h-6 w-6 text-white justify-end" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
+                <img x-on:click=" isOpen = !isOpen" src="./assets/images/close-white.svg" alt="close" class="fill-current h-6 w-6 text-white justify-end" role="button">
             </div>
         </div>
     </div>
@@ -46,9 +46,11 @@
     </div>
 
     <!--HERO-->
-    <div id="hero" class="flex flex-wrap px-3 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95">
-        <div id="info" class="w-full lg:w-1/2 3xl:w-7/12 lg:mt-35">
-            <h1 class="mt-8 lg:mt-0 text-black text-4xl lg:text-5xl 3xl:text-6xl font-bold leading-none text-center lg:text-left">Tenemos un préstamos para vos</h1>
+    <div id="hero" class="flex flex-wrap">
+        <div id="info" class="w-full lg:w-1/2 3xl:w-7/12 lg:mt-35 px-3 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95">
+            <h1 class="mt-8 lg:mt-0 text-black 
+                        text-4xl md:text-5xl lg:text-5xl xl:text-6xl                         
+                        font-bold leading-none text-center lg:text-left">Tenemos un préstamos para vos</h1>
 
             <div class="flex justify-center lg:justify-start">
                 <button class="btn-big-fill
@@ -73,9 +75,11 @@
                     <div class="inline-flex mr-2 items-start">
                         <img class="mt-1" src="./assets/images/bullet-check-green.svg" alt="bullet" width="16" height="16">
                     </div>
-                    <div class="flex-auto text-left items-center">
-                        <p class="text-xs">Pedilo 100% online, sin moverte de tu casa.</p>
-                        <p class="text-xs">Te lo depositamos en tu cuenta en el día.</p>
+                    <div class="flex-auto text-left items-center
+                                text-xs lg:text-2xl
+                                font-bold lg:font-medium">
+                        <p>Pedilo 100% online, sin moverte de tu casa.</p>
+                        <p>Te lo depositamos en tu cuenta en el día.</p>
                     </div>
                 </div>
             </div>
@@ -83,6 +87,7 @@
             <div class="flex justify-center lg:justify-start">
                 <div class="mt-2 mb-6 lg:ml-6">
                     <a class="text-xs 
+                            lg:text-base
                             font-bold 
                             text-black 
                             lg:text-green-900
@@ -100,7 +105,7 @@
             </div>            
         </div>
 
-        <div id="image" class="w-full lg:w-1/2 3xl:w-5/12 flex justify-center lg:justify-end lg:mt-20">
+        <div id="image" class="w-full lg:w-1/2 3xl:w-5/12 flex justify-center lg:justify-end lg:mt-20 px-0 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95">
             <img class="xs:block lg:hidden" src="./assets/images/hero-xs.svg" alt="hero">
             <img class="xs:hidden lg:block" src="./assets/images/hero-lg.svg" alt="hero">
         </div>

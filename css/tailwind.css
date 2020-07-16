@@ -65,6 +65,19 @@
     @apply bg-black text-white;
 }
 
+/* BTN TEXT */
+.btn-text {
+    @apply text-xs text-black font-bold;
+}
+.btn-text:focus {
+    @apply underline;
+}
+.btn-text:hover {
+    @apply underline;
+}
+.btn-text:active {
+    @apply bg-gray-300;
+}
 
 @tailwind utilities;
 
