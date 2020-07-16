@@ -10,14 +10,14 @@
 <body class="font-body bg-gray-100 antialiased">
 
     <!--BANNER-->
-    <div id="banner" class="px-3 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95 py-3 bg-blue-900">
+    <div id="banner" x-data="{ isOpen: true }" x-show="isOpen" class="px-3 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95 py-3 bg-blue-900">
         <div class="flex">
             <div class="w-full text-white">
                 <strong class="font-bold">COVID-19</strong>
                 <p class="inline sm:block lg:inline">El Corona virus nos está afectando a todos. Conocé qué recaudos podés tomar. </p><a href="https://www.argentina.gob.ar/salud/coronavirus-COVID-19">Leer más.</a>
             </div>
             <div class="flex justify-end">
-                <svg class="fill-current h-6 w-6 text-white justify-end" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
+                <svg x-on:click=" isOpen = !isOpen" class="fill-current h-6 w-6 text-white justify-end" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
             </div>
         </div>
     </div>
@@ -396,41 +396,98 @@
         <p class="text-base mt-4 text-gray-900 text-center">Consultá las preguntas frecuentas</p>
 
         <hr>
-            <div class="my-3 px-3">
+            <div x-data="{ isOpen01: true, imgPlus: './assets/images/bullet-plus.svg' , imgMinus: './assets/images/bullet-minus.svg' }" class="my-3 px-3">
                 <div class="flex justify-between py-3">
-                    <h3 class="text-base font-bold">¿Qué es el CBU?</h3>
-                    <img src="./assets/images/bullet-minus.svg" alt="bullet">
+                    <h3 class="text-base font-bold">¿Qué es el CBU?</h3>  
+                    <template x-if="isOpen01">
+                        <img x-on:click="isOpen01 = !isOpen01" x-bind:src="imgMinus" alt="bullet" role="button">
+                    </template>
+                    <template x-if="!isOpen01">
+                        <img x-on:click="isOpen01 = !isOpen01" x-bind:src="imgPlus" alt="bullet" role="button">
+                    </template>
                 </div>
-                <div>
-                    <p class="text-base text-gray-900">La Clave Bancaria Uniforme (CBU) es una clave de 22 dígitos que sirve para identificar una cuenta bancaria. La misma está disponible en el resumen de tu cuenta, en tu Home Banking, o podés obtenerla a través de cualquier cajero en la opción “Consultas” – “Consulta CBU”</p>
+                <div x-show="isOpen01">
+                    <p class="text-base text-gray-900">La Clave Bancaria Uniforme (CBU) es una clave que sirve para que el titular de una cuenta bancaria pueda realizar transferencias de dinero entre distintas cuentas.</p>
+                    <p class="text-base text-gray-900">La Clave Bancaria Uniforme (CBU) está compuesta por 22 dígitos y lo puedes visualizar en el extracto de tu cuenta o también está disponible en tu Home Banking.</p>
+                    <p class="text-base text-gray-900">También la puedes obtener a través de cualquier cajero en la opción “Consultas” – “Consulta CBU”</p>
                 </div>
             </div>
         <hr>
-            <div class="my-3 px-3">
+            <div x-data="{ isOpen02: false, imgPlus: './assets/images/bullet-plus.svg' , imgMinus: './assets/images/bullet-minus.svg' }" class="my-3 px-3">
                 <div class="flex justify-between py-3">
                     <h3 class="text-base font-bold">¿Cuáles son los requisitos para pedir un préstamo?</h3>
-                    <img src="./assets/images/bullet-plus.svg" alt="bullet">
+                    <template x-if="isOpen02">
+                        <img x-on:click="isOpen02 = !isOpen02" x-bind:src="imgMinus" alt="bullet" role="button">
+                    </template>
+                    <template x-if="!isOpen02">
+                        <img x-on:click="isOpen02 = !isOpen02" x-bind:src="imgPlus" alt="bullet" role="button">
+                    </template>
+                </div>
+                <div x-show="isOpen02">
+                    <p class="text-base text-gray-900">Para solicitar un préstamo con Wayni Móvil necesitas:</p>
+                    <ol class="text-base text-gray-900 list-inside list-decimal">
+                        <li>Una foto selfie sosteniendo tu DNI (sin lentes, sin gorros y que sea LEGIBLE).</li>
+                        <li>Una Foto de tu DNI que esté completo (frente y dorso LEGIBLES).</li>
+                        <li>El número completo del CBU de la cuenta bancaria a tu nombre (22 dígitos).</li>
+                        <li>Una foto de tu tarjeta de débito (TDD) (solo el frente LEGIBLE) ya que el débito automático directo es nuestra principal forma de cobro.</li>
+                        <li>Datos de contacto telefónico alternativos.</li>
+                    </ol>
                 </div>
             </div>
         <hr>
-            <div class="my-3 px-3">
+            <div x-data="{ isOpen03: false, imgPlus: './assets/images/bullet-plus.svg' , imgMinus: './assets/images/bullet-minus.svg' }" class="my-3 px-3">
                 <div class="flex justify-between py-3">
-                    <h3 class="text-base font-bold">¿Cuánto puedo pedir?</h3>
-                    <img src="./assets/images/bullet-plus.svg" alt="bullet">
+                    <h3 class="text-base font-bold">¿Cuánto puedo solicitar?</h3>
+                    <template x-if="isOpen03">
+                        <img x-on:click="isOpen03 = !isOpen03" x-bind:src="imgMinus" alt="bullet" role="button">
+                    </template>
+                    <template x-if="!isOpen03">
+                        <img x-on:click="isOpen03 = !isOpen03" x-bind:src="imgPlus" alt="bullet" role="button">
+                    </template>
+                </div>
+                <div x-show="isOpen03">
+                    <p class="text-base text-gray-900">El importe de tu préstamo se determinará automáticamente por el sistema después del análisis crediticio, siendo ARS 1.000 el monto mínimo y ARS 20.000 el máximo.</p>
+                    <p class="text-base text-gray-900">A medida que pagues en tiempo y forma vas a poder renovar por un monto mayor.</p>
                 </div>
             </div>
         <hr>
-            <div class="my-3 px-3">
+            <div x-data="{ isOpen04: false, imgPlus: './assets/images/bullet-plus.svg' , imgMinus: './assets/images/bullet-minus.svg' }" class="my-3 px-3">
                 <div class="flex justify-between py-3">
-                    <h3 class="text-base font-bold">¿En cuánto tiempo se acredita mi préstamo Waynimóvil? </h3>
-                    <img src="./assets/images/bullet-plus.svg" alt="bullet">
+                    <h3 class="text-base font-bold">¿En cuánto tiempo se acredita mi préstamo Waynimóvil?</h3>
+                    <template x-if="isOpen04">
+                        <img x-on:click="isOpen04 = !isOpen04" x-bind:src="imgMinus" alt="bullet" role="button">
+                    </template>
+                    <template x-if="!isOpen04">
+                        <img x-on:click="isOpen04 = !isOpen04" x-bind:src="imgPlus" alt="bullet" role="button">
+                    </template>
+                </div>
+                <div x-show="isOpen04">
+                    <p class="text-base text-gray-900">Se te acredita en los siguientes términos:</p>
+                    <ol class="text-base text-gray-900 list-inside list-decimal">
+                        <li>Si el préstamo lo solicitaste antes de las 15:00 hs se te acredita el mismo día de la solicitud.</li>
+                        <li>Si el préstamo lo solicitaste después de las 15:00 hs se te acredita al día siguiente hábil.</li>
+                    </ol>
+                    <p class="text-base text-gray-900">Y para realizar y procesar la transferencia la cuenta bancaria obligatoriamente debe estar a nombre del titular del préstamo y para recibir el dinero en la cuenta requerimos varios requisitos que deberás tener a la mano: </p>
+                    <p class="text-base text-gray-900">y/o una foto de la tarjeta de débito únicamente por el frente.</p>
+                    <p class="text-base text-gray-900">!...Ten presente que los fines de semana y días feriados no son laborables..!</p>
                 </div>
             </div>
         <hr>
-        <div class="my-3 px-3">
+        <div x-data="{ isOpen05: false, imgPlus: './assets/images/bullet-plus.svg' , imgMinus: './assets/images/bullet-minus.svg' }"  class="my-3 px-3">
             <div class="flex justify-between py-3">
                 <h3 class="text-base font-bold">¿Cómo puedo ponerme en contacto con un asesor?</h3>
-                <img src="./assets/images/bullet-plus.svg" alt="bullet">
+                <template x-if="isOpen05">
+                    <img x-on:click="isOpen05 = !isOpen05" x-bind:src="imgMinus" alt="bullet" role="button">
+                </template>
+                <template x-if="!isOpen05">
+                    <img x-on:click="isOpen05 = !isOpen05" x-bind:src="imgPlus" alt="bullet" role="button">
+                </template>
+            </div>
+            <div x-show="isOpen05">
+                <p class="text-base text-gray-900">En Wayni Móvil estamos para ayudarte en todo lo que necesites, contamos con un equipo de asesores (as)  capacitados (as) y dispuestos a colaborar antes, durante y después del proceso de solicitud de tu préstamo.</p>
+                <p class="text-base text-gray-900">Atenderemos cualquier consulta que requieras en el horario comprendido de:</p>
+                <p class="text-base text-gray-900">De Lunes a Viernes: 10:00 a 19:00 hrs y Sábados: 10:00 a 15:30 hrs</p>
+                <p class="text-base text-gray-900">Ten presente que los domingos y días feriados no son laborables.</p>
             </div>
         </div>
         <hr>
@@ -440,7 +497,8 @@
         <div class="flex justify-center">
             <button class="btn-big-fill
                             w-full sm:w-84 
-                            mt-6">
+                            mt-6"
+                            onclick="window.location.href='https://ayuda.waynimovil.com/hc/es-419';">
                 Explorá consultas frecuentes
             </button>
         </div>
