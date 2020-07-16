@@ -47,12 +47,12 @@
 
     <!--HERO-->
     <div id="hero" class="flex flex-wrap">
-        <div id="info" class="w-full lg:w-1/2 3xl:w-7/12 lg:mt-35 px-3 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95">
+        <div id="info" class="w-full lg:w-7/12 xl:w-8/12 3xl:w-9/12 lg:mt-35 px-3 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95">
             <h1 class="mt-8 lg:mt-0 text-black 
                         text-4xl md:text-5xl lg:text-5xl xl:text-6xl                         
                         font-bold leading-none text-center lg:text-left">Tenemos un préstamos para vos</h1>
 
-            <div class="flex justify-center lg:justify-start">
+            <div class="flex justify-center lg:justify-start lg:hidden">
                 <button class="btn-big-fill
                                 w-full sm:w-84 
                                 mt-6"
@@ -78,8 +78,14 @@
                     <div class="flex-auto text-left items-center
                                 text-xs lg:text-2xl
                                 font-bold lg:font-medium">
-                        <p>Pedilo 100% online, sin moverte de tu casa.</p>
-                        <p>Te lo depositamos en tu cuenta en el día.</p>
+                        <p class="lg:hidden">Pedilo 100% online, sin moverte de tu casa.</p>
+                        <p class="lg:hidden">Te lo depositamos en tu cuenta en el día.</p>
+
+                        <p class="hidden lg:block xl:hidden">Pedilo 100% online, sin moverte de tu casa. Te lo</p>
+                        <p class="hidden lg:block xl:hidden">depositamos en tu cuenta en el día.</p>
+
+                        <p class="hidden xl:block">Pedilo 100% online, sin moverte de tu casa. Te lo depositamos</p>
+                        <p class="hidden xl:block">en tu cuenta en el día.</p>
                     </div>
                 </div>
             </div>
@@ -102,11 +108,19 @@
                         Conocé los requisitos
                     </a>
                 </div>
-            </div>            
+            </div>
+            
+            <div class="flex justify-center lg:justify-start hidden lg:block">
+                <button class="btn-big-fill
+                                mt-6"
+                                onclick="window.location.href='https://app.waynimovil.com/#/signup';">
+                    ¡Solicitá tu préstamo!
+                </button>
+            </div>
         </div>
 
-        <div id="image" class="w-full lg:w-1/2 3xl:w-5/12 flex justify-center lg:justify-end lg:mt-20 px-0 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95">
-            <img class="xs:block lg:hidden" src="./assets/images/hero-xs.svg" alt="hero">
+        <div id="image" class="w-full lg:w-5/12 xl:w-4/12 3xl:w-3/12 flex justify-center lg:mt-20 lg:-ml-15 xl:-ml-5 2xl:-ml-20 3xl:-ml-84">
+            <img class="lg:hidden" src="./assets/images/hero-xs.svg" alt="hero">
             <img class="xs:hidden lg:block" src="./assets/images/hero-lg.svg" alt="hero">
         </div>
     </div>
@@ -171,13 +185,15 @@
 
     <!--VALUES-->
     <div id="values" class="mt-32 px-3 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95">
-        <h2 class="text-3xl font-bold text-center">Un préstamo Waynimovil es mucho más que dinero.</h2>
+        <div class="flex justify-center mb-6 lg:mb-20">
+            <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center xl:w-1/2">Un préstamo Waynimovil es mucho más que dinero.</h2>
+        </div>
 
         <div class="flex flex-wrap mt-6">
 
             <div class="flex justify-center lg:flex-1 lg:items-start w-full">
                 <div class="relative 
-                w-full sm:w-122 lg:w-73 xl:w-96 2xl:w-96 3xl:w-96
+                w-full sm:w-122 lg:w-70 xl:w-96 2xl:w-96 3xl:w-96
                 h-76 md:h-66 lg:h-95 xl:h-100 2xl:h-100 3xl:h-100
                 bg-purple-900 text-white p-6 rounded rounded-bl-2xl shadow-2xl">
                     <h4 class="text-2xl font-bold w-2/3">Es un préstamo para todos</h4>
@@ -191,7 +207,7 @@
 
             <div class="flex justify-center lg:flex-1 lg:items-start w-full">
                 <div class="relative 
-                w-full sm:w-122 lg:w-73 xl:w-96 2xl:w-96 3xl:w-96
+                w-full sm:w-122 lg:w-70 xl:w-96 2xl:w-96 3xl:w-96
                 h-76 md:h-66 lg:h-95 xl:h-100 2xl:h-100 3xl:h-100
                 bg-white mt-6 lg:mt-0 p-6 border rounded rounded-br-2xl shadow-2xl">
                     <h4 class="text-2xl text-green-900 font-bold w-2/3">Queremos verte crecer</h4>
@@ -217,7 +233,7 @@
 
             <div class="flex justify-center lg:flex-1 lg:items-start w-full">
                 <div class="relative 
-                w-full sm:w-122 lg:w-73 xl:w-96 2xl:w-96 3xl:w-96
+                w-full sm:w-122 lg:w-70 xl:w-96 2xl:w-96 3xl:w-96
                 h-76 md:h-66 lg:h-95 xl:h-100 2xl:h-100 3xl:h-100
                 bg-green-900 text-white mt-6 lg:mt-0 p-6 rounded rounded-tr-2xl shadow-2xl">
                     <h4 class="text-2xl font-bold w-2/3">Estamos disponibles</h4>
