@@ -11,76 +11,87 @@
 
 /* BTN BIG FILL */
 .btn-big-fill {
-    @apply bg-green-900 text-base text-white font-bold py-3 px-8 rounded-full;
+    @apply bg-purple-900 text-base text-white font-bold px-32px py-13px rounded-full;
 }
 .btn-big-fill:focus {
-    @apply outline-none shadow-outline-green;
+    @apply outline-none shadow-outline-purple;
 }
 .btn-big-fill:hover {
-    @apply bg-purple-900 text-white;
+    @apply outline-none shadow-none bg-green-800;
 }
 .btn-big-fill:active {
-    @apply bg-black text-white;
+    @apply outline-none shadow-none bg-green-900;
+}
+.btn-big-fill:disabled {
+    @apply bg-purple-900 bg-opacity-50 outline-none shadow-none cursor-not-allowed;
 }
 
 /* BTN BIG OUTLINE */
 .btn-big-outline {
-    @apply bg-transparent text-base text-black font-bold py-3 px-8 border border-gray-500 rounded-full;
+    @apply bg-transparent text-base text-purple-900 font-bold px-31px py-12px rounded-full border border-purple-900;
 }
 .btn-big-outline:focus {
-    @apply outline-none shadow-outline-gray;
+    @apply outline-none shadow-outline-purple;
 }
 .btn-big-outline:hover {
-    @apply border-transparent bg-purple-900 text-white;
+    @apply outline-none shadow-none border-green-800 bg-green-800 text-white px-31px py-12px;
 }
 .btn-big-outline:active {
-    @apply bg-black text-white;
+    @apply outline-none shadow-none border-green-900 bg-green-900 text-white px-31px py-12px;
+}
+.btn-big-outline:disabled {
+    @apply bg-transparent text-purple-900 font-bold px-31px py-12px rounded-full border border-purple-900 border-opacity-50 text-opacity-50 cursor-not-allowed;
 }
 
 /* BTN MEDIUM FILL */
 .btn-medium-fill {
-    @apply bg-green-900 text-xs text-white font-bold py-2 px-6 rounded-full;
+    @apply bg-purple-900 text-xs text-white font-bold px-24px py-8px rounded-full;
 }
 .btn-medium-fill:focus {
-    @apply outline-none shadow-outline-green;
+    @apply outline-none shadow-outline-purple;
 }
 .btn-medium-fill:hover {
-    @apply bg-purple-900 text-white;
+    @apply outline-none shadow-none bg-green-800;
 }
 .btn-medium-fill:active {
-    @apply bg-black text-white;
+    @apply outline-none shadow-none bg-green-900;
+}
+.btn-medium-fill:disabled {
+    @apply bg-purple-900 bg-opacity-50 outline-none shadow-none cursor-not-allowed;
 }
 
 /* BTN MEDIUM OUTLINE */
 .btn-medium-outline {
-    @apply bg-transparent text-xs text-black font-bold py-2 px-6 border border-gray-500 rounded-full;
+    @apply bg-transparent text-xs text-purple-900 font-bold px-23px py-7px rounded-full border border-purple-900;
 }
 .btn-medium-outline:focus {
-    @apply outline-none shadow-outline-gray;
+    @apply outline-none shadow-outline-purple;
 }
 .btn-medium-outline:hover {
-    @apply border-transparent bg-purple-900 text-white;
+    @apply outline-none shadow-none border-green-800 bg-green-800 text-white px-23px py-7px;
 }
 .btn-medium-outline:active {
-    @apply bg-black text-white;
+    @apply outline-none shadow-none border-green-900 bg-green-900 text-white px-23px py-7px;
+}
+.btn-medium-outline:disabled {
+    @apply bg-transparent text-purple-900 font-bold px-23px py-7px rounded-full border border-purple-900 border-opacity-50 text-opacity-50 cursor-not-allowed;
 }
 
 /* BTN TEXT */
 .btn-text {
-    @apply text-xs text-black font-bold;
+    @apply text-xs text-purple-900 font-bold;
 }
 .btn-text:focus {
-    @apply underline;
+    @apply outline-none underline;
 }
 .btn-text:hover {
-    @apply underline;
+    @apply outline-none underline;
 }
 .btn-text:active {
-    @apply bg-gray-300;
+    @apply outline-none no-underline bg-gray-300 px-2 py-0 rounded-lg;
+}
+.btn-text:disabled {
+    @apply bg-gray-300 bg-opacity-50 px-2 py-0 text-opacity-50 rounded-lg no-underline cursor-not-allowed;
 }
 
 @tailwind utilities;
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}

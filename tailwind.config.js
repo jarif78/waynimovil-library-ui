@@ -40,8 +40,9 @@ module.exports = {
         900: '#575372',
       },  
       green: {
-        100: '#CFF6E8',        
-        900: '#0FD08B',
+        100: '#CFF6E8',
+        800: '#0FD08B',        
+        900: '#00A067',
       }, 
       blue: {
         100: '#DAE9FC',                
@@ -58,7 +59,8 @@ module.exports = {
       yellow: {
         100: '#FFF9DF',                
         500: '#FFEC9F',        
-        900: '#FFE05F',
+        800: '#FFE05F',
+        900: '#FFCC3E',
       },      
     },
     extend: {
@@ -67,10 +69,23 @@ module.exports = {
         header: '0px 2px 6px rgba(0, 0, 0, 0.15)',
       },
       spacing: {
+        px: '1px',
+        '2px': '2px',
+        '4px': '4px',
+        '7px': '7px',
+        '8px': '8px',
+        '12px': '12px',
+        '13px': '13px',
+        '23px': '23px',
+        '24px': '24px',
+        '31px': '31px',
+        '32px': '32px',        
+        '34px': '34px',
+        '36px': '36px',
+        '0':  '0',
         '1':	'0.25rem',    //-> 4px	
         '2':	'0.5rem',     //-> 8px	
         '3':	'0.75rem',	  //-> 12px	
-        '3.25': '0.8125rem',//-> 13px
         '4':	'1rem',       //-> 16px	
         '5':	'1.25rem',    //-> 20px	
         '6':	'1.5rem',     //-> 24px	
@@ -127,6 +142,7 @@ module.exports = {
     borderRadius: ['responsive', 'hover', 'focus', 'active', 'disabled'],
     backgroundColor: ['responsive', 'hover', 'focus', 'active', 'disabled'],
     fontSize: ['responsive', 'hover', 'focus', 'active', 'disabled'],
+    cursor: ['responsive', 'hover', 'focus', 'active', 'disabled'],
   },
 
   plugins: [
