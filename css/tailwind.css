@@ -43,6 +43,23 @@
     @apply bg-transparent text-purple-900 font-bold px-31px py-12px rounded-full border border-purple-900 border-opacity-50 text-opacity-50 cursor-not-allowed;
 }
 
+/* BTN BIG OUTLINE FULL */
+.btn-big-outline-full {
+    @apply bg-transparent text-base text-purple-900 font-bold py-12px rounded-full border border-purple-900;
+}
+.btn-big-outline-full:focus {
+    @apply outline-none shadow-outline-purple;
+}
+.btn-big-outline-full:hover {
+    @apply outline-none shadow-none border-green-800 bg-green-800 text-white py-12px;
+}
+.btn-big-outline-full:active {
+    @apply outline-none shadow-none border-green-900 bg-green-900 text-white py-12px;
+}
+.btn-big-outline-full:disabled {
+    @apply bg-transparent text-purple-900 font-bold py-12px rounded-full border border-purple-900 border-opacity-50 text-opacity-50 cursor-not-allowed;
+}
+
 /* BTN MEDIUM FILL */
 .btn-medium-fill {
     @apply bg-purple-900 text-xs text-white font-bold px-24px py-8px rounded-full;
