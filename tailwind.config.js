@@ -69,6 +69,14 @@ module.exports = {
         header: '0px 2px 6px rgba(0, 0, 0, 0.15)',
       },
       spacing: {
+        '1neg':	'-0.25rem', //-> 4px	
+        '2neg':	'-0.5rem',  //-> 8px	
+        '3neg':	'-0.75rem', //-> 12px	
+        '4neg':	'-1rem',    //-> 16px	
+        '5neg':	'-1.25rem', //-> 20px	
+        '6neg':	'-1.5rem',  //-> 24px	
+        '7neg':	'-1.75rem', //-> 28px	
+        '8neg':	'-2rem',    //-> 32px	
         px: '1px',
         '2px': '2px',
         '4px': '4px',
