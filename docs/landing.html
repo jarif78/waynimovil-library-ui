@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.4.1/dist/alpine.min.js" defer></script>
 </head>
-<body class="font-body bg-gray-100 antialiased" x-data="{ 'showModal': false, 'showModalPagos': false }" @keydown.escape="showModal = false">
+<body class="font-body bg-gray-100 antialiased" x-data="{ 'showMenu': false, 'showModal': false, 'showModalPagos': false }" @keydown.escape="showModal = false">
 
     <!--BANNER-->
     <div id="banner" x-data="{ isOpen: true }" x-show="isOpen" class="flex px-3 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95 py-3 bg-blue-900">
@@ -31,7 +31,32 @@
             </div>
             <div class="flex">
                 <button class="btn-medium-outline" onclick="window.location.href='https://www.waynimovil.com/iniciar/#/login';">Ingresar</button>
-                <img class="ml-3" src="./assets//images/hamburger.svg" alt="menu">
+                <img x-on:click=" showMenu = !showMenu" src="./assets/images/hamburger.svg" alt="menu" class="ml-3" role="button">
+            </div>
+        </div>
+
+        <div class="navbar-menu bg-purple-900 px-2 py-10" x-data="{ showMenu: false }" x-show="showMenu">
+            <hr class="opacity-25">
+            <a class="block hover:underline focus:underline text-white font-bold text-center py-6" href="#">Inicio</a>
+            <hr class="opacity-25">
+            <a class="block hover:underline focus:underline text-white font-bold text-center py-6" href="#">Centro de ayuda</a>
+            <hr class="opacity-25">
+            <a class="block hover:underline focus:underline text-white font-bold text-center py-6" href="#">Blog</a>
+            <hr class="opacity-25">
+
+            <button class="btn-big-fill bg-white text-black
+                            w-full sm:w-84 
+                            mt-13"
+                            onclick="window.location.href='https://app.waynimovil.com/#/signup';">
+                ¡Solicitá tu préstamo!
+            </button>
+
+            <a class="block hover:underline focus:underline text-white font-bold text-center py-6" href="#">Ingresar</a>
+
+            <div class="flex justify-between w-1/3 mx-auto mt-7">
+                <a href="#"><img src="./assets/images/instagram-white.svg" alt="instagram"></a>
+                <a href="#"><img src="./assets/images/facebook-white-2.svg" alt="facebook"></a>
+                <a href="#"><img src="./assets/images/tweeter-white.svg" alt="tweeter"></a>
             </div>
         </div>
     </div>
@@ -59,7 +84,7 @@
                     <p class="text-xs text-black font-bold">Te lo depositamos en tu cuenta en el día.</p>
                 </div>
             </div>
-            <button class="btn-text inline-flex items-center mt-2" @click="showModalPagos = true">
+            <button class="btn-text inline-flex items-center mt-2" @click="showModal = true">
                 <img class="fill-current mr-1" src="./assets/images/btn-arrow-purple.svg" alt="icon" height="8">
                 <span>Conocé los requisitos</span>
             </button>
