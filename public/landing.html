@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.4.1/dist/alpine.min.js" defer></script>
 </head>
-<body class="font-body bg-gray-100 antialiased" x-data="{ 'showModal': false, 'showModalPagos': false }" @keydown.escape="showModal = false">
+<body class="font-body bg-gray-100 antialiased" x-data="{ 'showModalRequisitos': false, 'showModalPagos': false }" @keydown.escape="showModal = false">
 
     <!--BANNER-->
     <div id="banner" x-data="{ isOpen: true }" x-show="isOpen" class="flex px-3 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95 py-3 bg-blue-900">
@@ -89,7 +89,7 @@
                     <p class="text-xs text-black font-bold">Te lo depositamos en tu cuenta en el día.</p>
                 </div>
             </div>
-            <button class="btn-text inline-flex items-center mt-2" @click="showModal = true">
+            <button class="btn-text inline-flex items-center mt-2" @click="showModalRequisitos= true">
                 <img class="fill-current mr-1" src="./assets/images/btn-arrow-purple.svg" alt="icon" height="8">
                 <span>Conocé los requisitos</span>
             </button>
@@ -485,19 +485,20 @@
         </div>
     </div>
 
+    <!--MODAL MENU-->
+
     <!--MODAL REQUISITOS-->
-    <div x-show="showModal" class="overflow-auto h-screen fixed z-50 bottom-0 inset-x-0 px-4 pb-4 sm:inset-0 sm:flex sm:items-center sm:justify-center">
+    <div x-show="showModalRequisitos" class="overflow-auto h-screen fixed z-50 bottom-0 inset-x-0 px-4 pb-4 sm:inset-0 sm:flex sm:items-center sm:justify-center">
         <div class="fixed inset-0 transition-opacity">
-            <div class="absolute inset-0 bg-gray-900 opacity-75"></div>
+            <div class="absolute inset-0 bg-gray-900 opacity-75" @click="showModalRequisitos = false"></div>
         </div>
-        <div 
-        class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full" 
-        role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+        <div class="bg-white mt-10 rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full" 
+            role="dialog" aria-modal="true" aria-labelledby="modal-headline">
             <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <div class="xl:flex xl:items-start">
                     <!--header-->
                     <div class="flex justify-end items-center">
-                        <div class="cursor-pointer z-50" @click="showModal = false">
+                        <div class="cursor-pointer z-50" @click="showModalRequisitos = false">
                             <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
                                 <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
                             </svg>
@@ -567,78 +568,74 @@
     <!--MODAL METODOS DE PAGO-->
     <div x-show="showModalPagos" class="overflow-auto h-screen fixed z-50 bottom-0 inset-x-0 px-4 pb-4 sm:inset-0 sm:flex sm:items-center sm:justify-center">
         <div class="fixed inset-0 transition-opacity">
-            <div class="absolute inset-0 bg-gray-900 opacity-75"></div>
+            <div class="absolute inset-0 bg-gray-900 opacity-75" @click="showModalPagos = false"></div>
         </div>
-        <div 
-        class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full" 
-        role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-            <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                <div class="xl:flex xl:items-start">
-                    <!--header-->
-                    <div class="flex justify-end items-center">
-                        <div class="cursor-pointer z-50" @click="showModalPagos = false">
-                            <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-                                <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
-                            </svg>
-                        </div>
+        <div class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full" 
+        role="dialog" aria-modal="true" aria-labelledby="modal-headline">            
+            <div class="bg-white px-4 sm:p-6 pt-5 xl:flex xl:items-start">
+                <!--header-->
+                <div class="flex justify-end items-center">
+                    <div class="cursor-pointer z-50" @click="showModalPagos = false">
+                        <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                            <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+                        </svg>
                     </div>
-                    <!-- content -->
-                    <h3 class="text-base sm:text-2xl font-bold text-center px-10">Estos son los métodos habilitados para pagar tu préstamo Waynimóvil:</h3>
+                </div>
+                <!-- content -->
+                <h3 class="text-base sm:text-2xl font-bold text-center px-10">Estos son los métodos habilitados para pagar tu préstamo Waynimóvil:</h3>
 
-                    <div class="px-3">
-                        <div class="flex mt-5 border border-gray-500 rounded-md shadow-md px-3 py-3">
-                            <div class="w-2/12 mr-4">
-                                <img src="./assets/images/card.svg" alt="card">
-                            </div>
-                            <div class="w-10/12">
-                                <p class="text-base font-bold">Débito automático en tu cuenta bancaria o con tu tarjeta de débito VISA.</p>
-                                <p class="text-xs font-bold text-blue-900 my-2">La opción más fácil de pagar tus cuotas a tiempo 😊</p>
-                            </div>
-                        </div>  
-                    </div>
-
-                    <div class="flex mt-5 px-6">
+                <div class="px-3">
+                    <div class="flex mt-5 border border-gray-500 rounded-md shadow-md px-3 py-3">
                         <div class="w-2/12 mr-4">
-                            <img src="./assets/images/bank.svg" alt="bank">
+                            <img src="./assets/images/card.svg" alt="card">
                         </div>
                         <div class="w-10/12">
-                            <p class="text-base font-medium">Por transferencia bancaria.</p>
+                            <p class="text-base font-bold">Débito automático en tu cuenta bancaria o con tu tarjeta de débito VISA.</p>
+                            <p class="text-xs font-bold text-blue-900 my-2">La opción más fácil de pagar tus cuotas a tiempo 😊</p>
                         </div>
-                    </div>           
-
-                    <div class="px-3">
-                        <hr class="mt-4">
-                    </div>           
-
-                    <div class="flex mt-5 px-6">
-                        <div class="w-2/12 mr-4">
-                            <img src="./assets/images/kiosco.svg" alt="kiosco">
-                        </div>
-                        <div class="w-10/12">
-                            <p class="text-base font-medium">En <span class="font-bold">Rapipago</span> o <span class="font-bold">PagoFácil</span>, con un cupón de pago.</p>
-                        </div>
-                    </div>
-
-                    <div class="px-3">
-                        <hr class="mt-4">
                     </div>  
+                </div>
 
-                    <div class="flex mt-5 px-6">
-                        <div class="w-2/12 mr-4">
-                            <img src="./assets/images/mercadopago.svg" alt="mercado-pago">
-                        </div>
-                        <div class="w-10/12">
-                            <p class="text-base font-medium">A través de <span class="font-bold">MercadoPago</span>.</p>
-                        </div>
+                <div class="flex mt-5 px-6">
+                    <div class="w-2/12 mr-4">
+                        <img src="./assets/images/bank.svg" alt="bank">
                     </div>
+                    <div class="w-10/12">
+                        <p class="text-base font-medium">Por transferencia bancaria.</p>
+                    </div>
+                </div>           
 
-                    <div class="bg-blue-900 text-white rounded-b-lg mt-13 relative">
-                        <img class="absolute right-4 top-7neg" src="./assets//images/guy.svg" alt="guy">
-                        <p class="text-center text-base font-bold mx-4 pt-6">SABÍAS QUÉ...</p>
-                        <p class="text-center text-xs px-4 pt-2 pb-4"><span class="font-bold">Pagar las cuotas de tu préstamo a tiempo te beneficia.</span> La próxima vez que nos necesites, vamos a poder prestarte más.</p>
-                    </div>                       
+                <div class="px-3">
+                    <hr class="mt-4">
+                </div>           
+
+                <div class="flex mt-5 px-6">
+                    <div class="w-2/12 mr-4">
+                        <img src="./assets/images/kiosco.svg" alt="kiosco">
+                    </div>
+                    <div class="w-10/12">
+                        <p class="text-base font-medium">En <span class="font-bold">Rapipago</span> o <span class="font-bold">PagoFácil</span>, con un cupón de pago.</p>
+                    </div>
+                </div>
+
+                <div class="px-3">
+                    <hr class="mt-4">
+                </div>  
+
+                <div class="flex mt-5 px-6">
+                    <div class="w-2/12 mr-4">
+                        <img src="./assets/images/mercadopago.svg" alt="mercado-pago">
+                    </div>
+                    <div class="w-10/12">
+                        <p class="text-base font-medium">A través de <span class="font-bold">MercadoPago</span>.</p>
+                    </div>
                 </div>
             </div>
+            <div class="bg-blue-900 text-white rounded-b-lg mt-13 sm:mt-4 relative">
+                <img class="absolute right-4 top-7neg" src="./assets//images/guy.svg" alt="guy">
+                <p class="text-center text-base font-bold mx-4 pt-6">SABÍAS QUÉ...</p>
+                <p class="text-center text-xs px-4 pt-2 pb-6"><span class="font-bold">Pagar las cuotas de tu préstamo a tiempo te beneficia.</span> La próxima vez que nos necesites, vamos a poder prestarte más.</p>
+            </div>              
         </div>        
     </div>
 
