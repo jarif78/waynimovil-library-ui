@@ -1,5 +1,9 @@
 # Files
+.DS_Store
 publicar.sh
+composer.phar
+composer.lock
+package-lock.json
 
 # Dependency directories
-node_modules/
+/node_modules/
