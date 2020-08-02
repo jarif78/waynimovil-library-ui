@@ -22,7 +22,8 @@ module.exports = {
       '3xl': '1.5rem',    //24px 
       '4xl': '2rem',      //32px
       '5xl': '2.75rem',   //44px
-      '6xl': '4.625rem',  //74px
+      '6xl': '3rem',      //48px
+      '7xl': '4.625rem',  //74px
     },
     colors: {
       transparent: 'transparent',
@@ -115,6 +116,7 @@ module.exports = {
         '35':	'8.75rem',    //-> 140px
         '38':	'9.5rem',     //-> 152px	
         '40':	'10rem',      //-> 160px	
+        '43':	'10.75rem',   //-> 172px	
         '48':	'12rem',      //-> 192px
         '54': '13.5rem',    //-> 216px	
         '56':	'14rem',      //-> 224px	
