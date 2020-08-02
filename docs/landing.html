@@ -155,14 +155,57 @@
 
     <!--PROPOSAL-->
     <div id="proposal" class="mt-120 lg:mt-40">
-        <div class="container mx-auto">
-            ariel
+        <div class="container mx-auto px-3 lg:px-15 flex flex-wrap">
+            <div class="order-1 lg:w-1/2 lg:order-2">
+                <h3 class="text-center text-3xl font-bold leading-tight lg:text-left lg:text-4xl ">Pedir un préstamo en Waynimóvil es simple:</h3>
+
+                <table class="table-fixed mt-7">
+                    <tbody>
+                        <tr>
+                            <td class="w-14 flex flex-col items-center">
+                                <img src="./assets/images/bullet-1.svg" alt="bullet" width="44" height="44">
+                                <img class="mt-5" src="./assets/images/vertical-line-sm.svg" alt="vertical line">
+                            </td>
+                            <td>
+                                <h3 class="text-xl font-bold">Te registrás con tu DNI</h3>                    
+                                <p class="text-base font-medium mb-10">Sólo necesitamos tu e-mail y celular. Sin vueltas.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="flex flex-col items-center">
+                                <img src="./assets/images/bullet-2.svg" alt="bullet" width="44" height="44">
+                                <img class="mt-5" src="./assets/images/vertical-line-lg.svg" alt="vertical line">
+                            </td>
+                            <td>
+                                <h3 class="text-xl font-bold">Calculamos el mejor préstamo para vos</h3>                    
+                                <p class="text-base font-medium mb-8">Te decimos al instante cuánto podemos prestarte y cuáles son las condiciones.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="flex flex-col items-center">
+                                <img src="./assets/images/bullet-3.svg" alt="bullet" width="44" height="44">
+                            </td>
+                            <td>
+                                <h3 class="text-xl font-bold">¡Depositamos el dinero en tu cuenta!</h3>                    
+                                <p class="text-base font-medium">Sin trámites ni papeles: recibís el dinero para usarlo como quieras, y lo debitamos de tu tarjeta de débito.</p>
+    
+                                <button class="btn-text inline-flex items-center text-base mt-2" @click="showModalPagos = true">
+                                    <img class="fill-current mr-1" src="./assets/images/btn-arrow-purple.svg" alt="icon" height="8">
+                                    <span>Conocé los métodos de pago</span>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>      
+            </div>
+            <div class="order-2 lg:w-1/2 lg:order-1 mt-6 mx-auto">
+                <img class="block lg:hidden" src="./assets/images/wallet-1.svg" alt="wallet">
+                <img class="hidden lg:block" src="./assets/images/how.svg" alt="wallet">
+            </div>
         </div>
     </div>
 
-
-
-    <div id="proposal" class="container mx-auto flex flex-wrap flex-col px-1 mt-120 lg:mt-40">
+    <!--<div id="proposal" class="container mx-auto flex flex-wrap flex-col px-1 mt-120 lg:mt-40">
         <div>
             <h3 class="text-center text-3xl font-bold leading-tight">Pedir un préstamo en Waynimóvil es simple:</h3>
 
@@ -208,11 +251,11 @@
         <div class="mt-6 mx-auto">
             <img src="./assets/images/wallet-1.svg" alt="wallet">
         </div>
-    </div>
+    </div>-->
 
     <!--VALUES-->
-    <div id="values" class="px-3 mt-20">
-        <h3 class="text-center text-3xl font-bold leading-tight">Un préstamo Waynimovil es mucho más que dinero.</h3>
+    <div id="values" class="container mx-auto px-3 lg:px-15 px-3 mt-20">
+        <h3 class="text-center text-3xl font-bold leading-tight lg:w-1/2 mx-auto">Un préstamo Waynimovil es mucho más que dinero.</h3>
 
         <div class="flex flex-wrap">
             <div class="flex justify-center mt-6 lg:flex-1 lg:items-start w-full">
@@ -264,7 +307,7 @@
     </div>
     
     <!--CTA-->
-    <div id="cta" class="mt-22 px-3 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95">
+    <div id="cta" class="container mx-auto px-3 lg:px-15 mt-22 px-3 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95">
         <h2 class="text-3xl font-bold text-center leading-none">Descubrí cuánto podemos prestarte</h2>
 
         <div class="flex justify-center">
@@ -276,7 +319,7 @@
             </button>
         </div>
 
-        <p class="mt-6 text-xs font-medium leading-snug text-center">Un préstamo es una ayuda frente una necesidad o una oportunidad de crecimiento. Pero también es un compromiso. Tomalo sólo si lo necesitás.</p>
+        <p class="mt-6 text-xs font-medium leading-snug text-center lg:w-1/2 lg:mx-auto">Un préstamo es una ayuda frente una necesidad o una oportunidad de crecimiento. Pero también es un compromiso. Tomalo sólo si lo necesitás.</p>
         
         <div class="flex justify-center">
             <button class="btn-text inline-flex items-center mt-2">
@@ -287,8 +330,45 @@
     </div>
 
     <!--WALLET-->
-    <div id="wallet" class="px-1 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95">
-        <div class="lg:hidden mt-22 text-center">
+    <div id="wallet" class="container mx-auto px-3 lg:px-15 flex flew-wrap mt-22">
+        <div class="w-full lg:w-1/2">
+            <span class="text-xs font-bold text-white bg-blue-500 px-2 py-1 rounded">PRÓXIMAMENTE</span>
+    
+            <h2 class="text-3xl font-bold mt-5 leading-none">Tené tu cuenta virtual sin pasar por un banco.</h2>
+            <p class="text-base font-medium leading-snug mt-4">Estamos construyendo la billetera Waynimóvil que puedas hacer lo mismo que en un banco pero simple y desde el celular.</p>
+            
+            <img class="block lg:hidden object-contain w-full" src="./assets/images/wallet-2.svg" alt="wallet">
+            
+            <div class="flex justify-center mt-18">
+                <img class="object-none object-center" src="./assets/images/dollar.svg" alt="icon">
+            </div>
+            <h3 class="text-xl font-bold mt-4">Enviá y recibí dinero</h3>
+
+            <div class="relative">
+                <p class="mt-2 text-base font-medium text-gray-900">
+                    Vas a poder enviar y recibir dinero, hacer transferencias desde tu celular a cualquier persona con solo pasarle tu CVU               </p>
+                <img class="absolute bottom-1 right-5" src="./assets/images/help-green.svg" alt="help">
+            </div>
+            
+            <div class="flex justify-center mt-7">
+                <img src="./assets/images/mobile-scan.svg" alt="icon">
+            </div>        
+            <h3 class="text-xl font-bold mt-4">Pagá servicios desde el celular</h3>
+            <p class="mt-2 text-base font-medium text-gray-900">Vas a poder pagar servicios con tal solo scanear el código QR o cargar la SUBE. </p>
+    
+            <div class="flex justify-center mt-7">
+                <img src="./assets/images/faces.svg" alt="icon">
+            </div>        
+            <h3 class="text-xl font-bold mt-4">¿Necesitás una mano extra? Solicitá tu préstamo desde la billetera</h3>
+            <p class="mt-2 text-base font-medium text-gray-900">Sin papeles, sin validaciones extra. En un sólo click.</p>
+        </div>
+        <div class="hidden lg:block lg:w-1/2">
+            <img class="object-contain w-full" src="./assets/images/wallet-3.svg" alt="wallet">
+        </div>
+    </div>
+
+    <!--<div id="wallet" class="container mx-auto px-3 lg:px-15 px-1 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95">
+        <div class="mt-22 text-center">
             <span class="text-xs font-bold text-white bg-blue-500 px-2 py-1 rounded">PRÓXIMAMENTE</span>
     
             <h2 class="text-3xl font-bold mt-5 leading-none">Tené tu cuenta virtual sin pasar por un banco.</h2>
@@ -322,10 +402,58 @@
             <h3 class="text-xl font-bold mt-4">¿Necesitás una mano extra? Solicitá tu préstamo desde la billetera</h3>
             <p class="mt-2 text-base font-medium text-gray-900">Sin papeles, sin validaciones extra. En un sólo click.</p>
         </div>
-    </div>
+    </div>-->
 
     <!--CARD-->
-    <div id="card" class="px-1 py-10 mt-22  lg:px-15 xl:px-6 2xl:px-26 3xl:px-95 text-white text-center bg-black">  
+    <div id="card" class="bg-black text-white">
+        <div class="container mx-auto px-3 lg:px-15 flex flex-wrap ">
+            <div class="hidden lg:block lg:w-1/2">
+                <div class="flex relative h-54 sm:h-84 md:h-75 mt-6">
+                    <img class="absolute md:h-54 md:w-83 z-10 ml-0 mt-0" src="./assets/images/visa-yellow.svg" alt="visa">
+                    <img class="absolute md:h-54 md:w-83 z-20 ml-3 mt-3" src="./assets/images/visa-green.svg" alt="visa">
+                    <img class="absolute md:h-54 md:w-83 z-10 ml-0 mt-6" src="./assets/images/visa-white.svg" alt="visa">
+                </div>
+            </div>
+            <div class="w-full lg:w-1/2">
+                <h2 class="text-3xl font-bold">Tu billetera viene con una tarjeta Visa</h2>
+    
+                <div class="flex relative h-54 sm:h-84 md:h-75 mt-6 lg:hidden">
+                    <img class="absolute hidden md:h-54 md:w-83 z-10 md:block ml-1 mt-20" src="./assets/images/visa-yellow.svg" alt="visa">
+                    <img class="absolute block md:h-54 md:w-83 z-20 md:ml-48 md:mt-5" src="./assets/images/visa-green.svg" alt="visa">
+                    <img class="absolute hidden md:h-54 md:w-83 z-10 md:block ml-100 mt-20" src="./assets/images/visa-white.svg" alt="visa">
+                </div>
+    
+                <p class="text-xl font-medium mt-6">La vas a poder usar para hacer compras en cuotas por Internet o en cualquier lugar físico que acepte Visa 😉</p>
+                <p class="text-xl font-medium mt-6">Dejanos tu email y enterate cuando esté lista!</p>
+                <div class="px-3 relative">
+                    <input class="w-full
+                    sm:w-84
+                    mt-6 
+                    shadow 
+                    appearance-none 
+                    border 
+                    rounded
+                    py-4 
+                    px-3 
+                    text-gray-900 
+                    font-medium
+                    placeholder-gray-900 
+                    placeholder-font-medium
+                    border
+                    leading-tight 
+                    text-xs
+                    focus:outline-none 
+                    focus:shadow-outline-gray" type="text" placeholder="Tu email...">
+                    
+                    <div class="absolute bottom-1 right-6">
+                        <img src="./assets/images/button-next-green.svg" alt="next" role="button">          
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div id="card" class="px-1 py-10 mt-22  lg:px-15 xl:px-6 2xl:px-26 3xl:px-95 text-white text-center bg-black">  
         
         <h2 class="text-3xl font-bold">Tu billetera viene con una tarjeta Visa</h2>
 
@@ -363,10 +491,135 @@
                 <img src="./assets/images/button-next-green.svg" alt="next" role="button">          
             </div>
         </div>
-    </div>
+    </div>-->
 
     <!--FAQ-->
-    <div id="faq" class="px-3 py-20 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95 ">
+    <div id="faq" class="container mx-auto px-3 lg:px-15 ">
+        <div class="lg:w-200 mx-auto">
+            <h2 class="text-3xl font-bold text-center">¿Dudas?</h2>
+            <h2 class="text-3xl mt-0 font-bold text-center">¿Necesitás más info?</h2>
+    
+            <hr class="mt-10 border-solid border-1 border-gray-500">
+    
+            <div x-data="{ isOpen01: true, imgPlus: './assets/images/bullet-plus.svg' , imgMinus: './assets/images/bullet-minus.svg' }" class="px-3">
+                <div class="flex justify-between py-3">
+                    <h3 class="text-base font-bold">¿Qué es el CBU?</h3>  
+                    <template x-if="isOpen01">
+                        <img x-on:click="isOpen01 = !isOpen01" x-bind:src="imgMinus" alt="bullet" role="button">
+                    </template>
+                    <template x-if="!isOpen01">
+                        <img x-on:click="isOpen01 = !isOpen01" x-bind:src="imgPlus" alt="bullet" role="button">
+                    </template>
+                </div>
+                <div x-show="isOpen01" class="py-3">
+                    <p class="text-base font-medium text-black">La Clave Bancaria Uniforme (CBU) es una clave que sirve para que el titular de una cuenta bancaria pueda realizar transferencias de dinero entre distintas cuentas.</p>
+                    <p class="text-base font-medium text-black">La Clave Bancaria Uniforme (CBU) está compuesta por 22 dígitos y lo puedes visualizar en el extracto de tu cuenta o también está disponible en tu Home Banking.</p>
+                    <p class="text-base font-medium text-black">También la puedes obtener a través de cualquier cajero en la opción “Consultas” – “Consulta CBU”</p>
+                </div>
+            </div>
+    
+            <hr class="border-solid border-1 border-gray-500">
+    
+            <div x-data="{ isOpen02: false, imgPlus: './assets/images/bullet-plus.svg' , imgMinus: './assets/images/bullet-minus.svg' }" class="px-3">
+                <div class="flex justify-between py-3">
+                    <h3 class="text-base font-bold">¿Cuáles son los requisitos para pedir un préstamo?</h3>
+                    <template x-if="isOpen02">
+                        <img x-on:click="isOpen02 = !isOpen02" x-bind:src="imgMinus" alt="bullet" role="button">
+                    </template>
+                    <template x-if="!isOpen02">
+                        <img x-on:click="isOpen02 = !isOpen02" x-bind:src="imgPlus" alt="bullet" role="button">
+                    </template>
+                </div>
+                <div x-show="isOpen02" class="py-3">
+                    <p class="text-base font-medium text-black">Para solicitar un préstamo con Wayni Móvil necesitas:</p>
+                    <ol class="text-base font-medium text-black list-inside list-decimal">
+                        <li>Una foto selfie sosteniendo tu DNI (sin lentes, sin gorros y que sea LEGIBLE).</li>
+                        <li>Una Foto de tu DNI que esté completo (frente y dorso LEGIBLES).</li>
+                        <li>El número completo del CBU de la cuenta bancaria a tu nombre (22 dígitos).</li>
+                        <li>Una foto de tu tarjeta de débito (TDD) (solo el frente LEGIBLE) ya que el débito automático directo es nuestra principal forma de cobro.</li>
+                        <li>Datos de contacto telefónico alternativos.</li>
+                    </ol>
+                </div>
+            </div>
+    
+            <hr class="border-solid border-1 border-gray-500">
+    
+            <div x-data="{ isOpen03: false, imgPlus: './assets/images/bullet-plus.svg' , imgMinus: './assets/images/bullet-minus.svg' }" class="px-3">
+                <div class="flex justify-between py-3">
+                    <h3 class="text-base font-bold">¿Cuánto puedo solicitar?</h3>
+                    <template x-if="isOpen03">
+                        <img x-on:click="isOpen03 = !isOpen03" x-bind:src="imgMinus" alt="bullet" role="button">
+                    </template>
+                    <template x-if="!isOpen03">
+                        <img x-on:click="isOpen03 = !isOpen03" x-bind:src="imgPlus" alt="bullet" role="button">
+                    </template>
+                </div>
+                <div x-show="isOpen03" class="py-3">
+                    <p class="text-base font-medium text-black">El importe de tu préstamo se determinará automáticamente por el sistema después del análisis crediticio, siendo ARS 1.000 el monto mínimo y ARS 20.000 el máximo.</p>
+                    <p class="text-base font-medium text-black">A medida que pagues en tiempo y forma vas a poder renovar por un monto mayor.</p>
+                </div>
+            </div>
+    
+            <hr class="border-solid border-1 border-gray-500">
+    
+            <div x-data="{ isOpen04: false, imgPlus: './assets/images/bullet-plus.svg' , imgMinus: './assets/images/bullet-minus.svg' }" class="px-3">
+                <div class="flex justify-between py-3">
+                    <h3 class="text-base font-bold">¿En cuánto tiempo se acredita mi préstamo Waynimóvil?</h3>
+                    <template x-if="isOpen04">
+                        <img x-on:click="isOpen04 = !isOpen04" x-bind:src="imgMinus" alt="bullet" role="button">
+                    </template>
+                    <template x-if="!isOpen04">
+                        <img x-on:click="isOpen04 = !isOpen04" x-bind:src="imgPlus" alt="bullet" role="button">
+                    </template>
+                </div>
+                <div x-show="isOpen04" class="py-3">
+                    <p class="text-base font-medium text-black">Se te acredita en los siguientes términos:</p>
+                    <ol class="text-base font-medium text-black list-inside list-decimal">
+                        <li>Si el préstamo lo solicitaste antes de las 15:00 hs se te acredita el mismo día de la solicitud.</li>
+                        <li>Si el préstamo lo solicitaste después de las 15:00 hs se te acredita al día siguiente hábil.</li>
+                    </ol>
+                    <p class="text-base font-medium text-black">Y para realizar y procesar la transferencia la cuenta bancaria obligatoriamente debe estar a nombre del titular del préstamo y para recibir el dinero en la cuenta requerimos varios requisitos que deberás tener a la mano: </p>
+                    <p class="text-base font-medium text-black">y/o una foto de la tarjeta de débito únicamente por el frente.</p>
+                    <p class="text-base font-medium text-black">!...Ten presente que los fines de semana y días feriados no son laborables..!</p>
+                </div>
+            </div>
+    
+            <hr class="border-solid border-1 border-gray-500">
+    
+            <div x-data="{ isOpen05: false, imgPlus: './assets/images/bullet-plus.svg' , imgMinus: './assets/images/bullet-minus.svg' }"  class="px-3">
+                <div class="flex justify-between py-3">
+                    <h3 class="text-base font-bold">¿Cómo puedo ponerme en contacto con un asesor?</h3>
+                    <template x-if="isOpen05">
+                        <img x-on:click="isOpen05 = !isOpen05" x-bind:src="imgMinus" alt="bullet" role="button">
+                    </template>
+                    <template x-if="!isOpen05">
+                        <img x-on:click="isOpen05 = !isOpen05" x-bind:src="imgPlus" alt="bullet" role="button">
+                    </template>
+                </div>
+                <div x-show="isOpen05" class="py-3">
+                    <p class="text-base font-medium text-black">En Wayni Móvil estamos para ayudarte en todo lo que necesites, contamos con un equipo de asesores (as)  capacitados (as) y dispuestos a colaborar antes, durante y después del proceso de solicitud de tu préstamo.</p>
+                    <p class="text-base font-medium text-black">Atenderemos cualquier consulta que requieras en el horario comprendido de:</p>
+                    <p class="text-base font-medium text-black">De Lunes a Viernes: 10:00 a 19:00 hrs y Sábados: 10:00 a 15:30 hrs</p>
+                    <p class="text-base  font-mediumtext-black">Ten presente que los domingos y días feriados no son laborables.</p>
+                </div>
+            </div>
+    
+            <hr class="border-solid border-1 border-gray-500">
+    
+            <h3 class="text-base font-medium text-center mt-10"><span class="font-bold">¿No encontraste lo que buscás?</span> No hay problema, podemos ayudarte </h3>
+    
+            <div class="flex justify-center">
+                <button class="btn-big-fill
+                                w-full sm:w-84 
+                                mt-6"
+                                onclick="window.location.href='https://ayuda.waynimovil.com/hc/es-419';">
+                    Explorá consultas frecuentes
+                </button>
+            </div>
+        </div>        
+    </div>
+
+    <!--<div id="faq" class="px-3 py-20 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95 ">
         <h2 class="sm:hidden text-3xl font-bold text-center">¿Dudas?</h2>
         <h2 class="sm:hidden text-3xl mt-0 font-bold text-center">¿Necesitás más info?</h2>
 
@@ -487,63 +740,85 @@
                 Explorá consultas frecuentes
             </button>
         </div>
-    </div>
+    </div>-->
 
     <!--CTA-->
-    <div id="cta" class="px-3 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95 py-10 bg-black text-center text-white">
-        <h2 class="text-4xl font-bold">Tenemos un préstamo para vos</h2>
-
-        <div class="flex justify-center lg:hidden">
-            <div class="flex mt-6">
-                <div class="inline-flex mr-2 items-start">
-                    <img class="mt-1" src="./assets/images/bullet-check-green.svg" alt="bullet" width="16" height="16">
-                </div>
-                <div class="flex-auto text-left items-center">
-                    <p class="text-xs">Pedilo 100% online, sin moverte de tu casa.</p>
-                    <p class="text-xs">Te lo depositamos en tu cuenta en el día.</p>
+    <div id="cta" class="bg-black text-center text-white">
+        <div class="container mx-auto px-3 lg:px-15 py-10">
+            <h2 class="text-4xl font-bold">Tenemos un préstamo para vos</h2>
+    
+            <div class="flex justify-center lg:hidden">
+                <div class="flex mt-6">
+                    <div class="inline-flex mr-2 items-start">
+                        <img class="mt-1" src="./assets/images/bullet-check-green.svg" alt="bullet" width="16" height="16">
+                    </div>
+                    <div class="flex-auto text-left items-center">
+                        <p class="text-xs">Pedilo 100% online, sin moverte de tu casa.</p>
+                        <p class="text-xs">Te lo depositamos en tu cuenta en el día.</p>
+                    </div>
                 </div>
             </div>
+    
+            <div class="flex justify-center hidden lg:block">
+                <ul class="inline-flex">
+                    <li class="mr-10">
+                        <img class="inline-flex mr-1" src="./assets/images/bullet-check-green.svg" alt="bullet" width="16" height="16"> 100% online
+                    </li>
+                    <li class="mr-10">
+                        <img class="inline-flex mr-1" src="./assets/images/bullet-check-green.svg" alt="bullet" width="16" height="16"> Sin moverte de tu casa
+                    </li>
+                    <li>
+                        <img class="inline-flex mr-1" src="./assets/images/bullet-check-green.svg" alt="bullet" width="16" height="16"> ¡Te lo otorgamos en el día!
+                    </li>
+                </ul>
+            </div>
+    
+            <button class="btn-big-fill bg-white text-black
+                            w-full sm:w-84 
+                            mt-13"
+                            onclick="window.location.href='https://app.waynimovil.com/#/signup';">
+                ¡Solicitá tu préstamo!
+            </button>
         </div>
-
-        <button class="btn-big-fill bg-white text-black
-                        w-full sm:w-84 
-                        mt-13"
-                        onclick="window.location.href='https://app.waynimovil.com/#/signup';">
-            ¡Solicitá tu préstamo!
-        </button>
     </div>
 
     <!--FOOTER-->
-    <div id="footer" class="flex flex-wrap bg-blue-900 text-white px-3 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95 py-10">
-        <div class="w-full flex justify-center lg:w-1/2 lg:justify-start">
-            <img src="./assets/images/wayni-logo-white.svg" alt="logo">
-        </div>
-        <div class="w-full mt-7 lg:w-1/2 text-base font-bold text-center">
-            <!--<a class="block hover:underline focus:underline" href="#">Soporte</a>
-            <a class="block mt-6 hover:underline focus:underline" href="#">Quienes somos</a>
-            <a class="block mt-6 hover:underline focus:underline" href="#">Préstamos</a>
-            <a class="block mt-6 hover:underline focus:underline" href="#">Billetera Virtual</a>-->
-            <a class="block mt-6 hover:underline focus:underline" href="#">Términos y condiciones</a>
-            <a class="block mt-6 hover:underline focus:underline" href="#">Política de privacidad</a>
-        </div>
-
-        <div class="flex justify-between w-1/2 mx-auto mt-7">
-            <a href="https://instagram.com/waynimovil/"><img src="./assets/images/instagram-white.svg" alt="instagram"></a>
-            <a href="https://facebook.com/waynimovil/"><img src="./assets/images/facebook-white-2.svg" alt="facebook"></a>
-            <a href="https://twitter.com/waynimovil"><img src="./assets/images/tweeter-white.svg" alt="tweeter"></a>
+    <div id="footer" class="bg-blue-900 text-white">
+        <div class="container mx-auto px-3 lg:px-15 py-10 flex flex-wrap">
+            <div class="w-full flex justify-center lg:w-1/2 lg:justify-start">
+                <img src="./assets/images/wayni-logo-white.svg" alt="logo">
+            </div>
+            <div class="w-full mt-7 lg:w-1/2">
+                <div class="text-base font-bold text-center">
+                    <!--<a class="block hover:underline focus:underline" href="#">Soporte</a>
+                    <a class="block mt-6 hover:underline focus:underline" href="#">Quienes somos</a>
+                    <a class="block mt-6 hover:underline focus:underline" href="#">Préstamos</a>
+                    <a class="block mt-6 hover:underline focus:underline" href="#">Billetera Virtual</a>-->
+                    <a class="block mt-6 hover:underline focus:underline" href="#">Términos y condiciones</a>
+                    <a class="block mt-6 hover:underline focus:underline" href="#">Política de privacidad</a>
+                </div>
+        
+                <div class="flex justify-between w-1/3 mx-auto mt-7">
+                    <a href="https://instagram.com/waynimovil/"><img src="./assets/images/instagram-white.svg" alt="instagram"></a>
+                    <a href="https://facebook.com/waynimovil/"><img src="./assets/images/facebook-white-2.svg" alt="facebook"></a>
+                    <a href="https://twitter.com/waynimovil"><img src="./assets/images/tweeter-white.svg" alt="tweeter"></a>
+                </div>
+            </div>        
         </div>
     </div>
 
     <!--LEGAL-->
-    <div id="legal" class="px-4 lg:px-15 xl:px-6 2xl:px-26 3xl:px-95 py-10 lg:py-16">
-
-        <p class="text-xs font-medium text-gray-900">(*)Tasa de Interés Nominal Anual (TNA) = 99% Tasa de Interés Efectiva Anual (TEA) = 159.03%. La tasa de interés es fija (valores sin iva). CFT(NA): 337.18%.</p>
-        <p class="text-xs font-medium text-gray-900">El período máximo de repago son 180 días, todos tienen la opción de repago mínimo de 90 días.</p>
-
-        <div class="flex justify-between items-start w-full mt-8 px-3">
-            <img class="sm:mr-2" src="./assets/images/legal-1.svg" alt="legal">
-            <img class="sm:mr-2" src="./assets/images/legal-2.svg" alt="legal">
-            <img class="sm:mr-2" src="./assets/images/legal-3.svg" alt="legal">
+    <div id="legal" class="container mx-auto px-3 lg:px-15 py-10 lg:py-16 flex flex-wrap">
+        <div class="w-full lg:w-1/2">
+            <p class="text-xs font-medium text-gray-900">(*)Tasa de Interés Nominal Anual (TNA) = 99% Tasa de Interés Efectiva Anual (TEA) = 159.03%. La tasa de interés es fija (valores sin iva). CFT(NA): 337.18%.</p>
+            <p class="text-xs font-medium text-gray-900">El período máximo de repago son 180 días, todos tienen la opción de repago mínimo de 90 días.</p>   
+        </div>
+        <div class="w-full lg:w-1/2">
+            <div class="flex justify-end">
+                <img class="sm:mr-4" src="./assets/images/legal-1.svg" alt="legal">
+                <img class="sm:mr-4" src="./assets/images/legal-2.svg" alt="legal">
+                <img class="sm:mr-4" src="./assets/images/legal-3.svg" alt="legal">
+            </div>
         </div>
     </div>
 

@@ -140,6 +140,7 @@ module.exports = {
         '122': '30.5rem',   //-> 488px
         '125': '31.25rem',  //-> 500px
         '132': '33rem',     //-> 528px
+        '200': '50rem',     //800px
       },
       borderRadius: {        
         '2xl': '38px',
