@@ -128,7 +128,7 @@
     </div>
 
     <!--PROPOSAL-->
-    <div id="proposal" class="mt-16 lg:mt-40 lg:mb-26">
+    <div id="proposal" class="mt-16 lg:mt-30 lg:mb-26">
         <div class="container mx-auto px-3 sm:px-20 md:px-32 lg:px-15 flex flex-wrap text-black">
             <div class="order-1 lg:w-1/2 lg:order-2">
                 <div class="w-full lg:w-9/10">
@@ -142,8 +142,8 @@
                                     <!--<img class="mt-5" src="./assets/images/vertical-line-sm.svg" alt="vertical line">-->
                                 </td>
                                 <td>
-                                    <h3 class="text-xl font-bold">Te registrás con tu DNI</h3>                    
-                                    <p class="text-base font-medium mb-10">Sólo necesitamos tu e-mail y celular. Sin vueltas.</p>
+                                    <h3 class="text-xl font-bold mt-1 lg:ml-2">Te registrás con tu DNI</h3>                    
+                                    <p class="text-base font-medium mb-10 lg:ml-2">Sólo necesitamos tu e-mail y celular. Sin vueltas.</p>
                                 </td>
                             </tr>
                             <tr>
@@ -152,8 +152,8 @@
                                     <!--<img class="mt-5" src="./assets/images/vertical-line-lg.svg" alt="vertical line">-->
                                 </td>
                                 <td>
-                                    <h3 class="text-xl font-bold">Calculamos el mejor préstamo para vos</h3>                    
-                                    <p class="text-base font-medium mb-8">Te decimos al instante cuánto podemos prestarte y cuáles son las condiciones.</p>
+                                    <h3 class="text-xl font-bold mt-1 lg:ml-2">Calculamos el mejor préstamo para vos</h3>                    
+                                    <p class="text-base font-medium mb-8 lg:ml-2">Te decimos al instante cuánto podemos prestarte y cuáles son las condiciones.</p>
                                 </td>
                             </tr>
                             <tr>
@@ -161,10 +161,10 @@
                                     <img src="./assets/images/bullet-3.svg" alt="bullet" width="44" height="44">
                                 </td>
                                 <td>
-                                    <h3 class="text-xl font-bold">¡Depositamos el dinero en tu cuenta!</h3>                    
-                                    <p class="text-base font-medium">Sin trámites ni papeles: recibís el dinero para usarlo como quieras, y lo debitamos de tu tarjeta de débito.</p>
+                                    <h3 class="text-xl font-bold mt-1 lg:ml-2">¡Depositamos el dinero en tu cuenta!</h3>                    
+                                    <p class="text-base font-medium lg:ml-2">Sin trámites ni papeles: recibís el dinero para usarlo como quieras, y lo debitamos de tu tarjeta de débito.</p>
         
-                                    <button class="btn-text inline-flex items-center text-base mt-2" @click="showModalPagos = true">
+                                    <button class="btn-text inline-flex items-center text-base mt-2 lg:ml-2" @click="showModalPagos = true">
                                         <img class="fill-current mr-1" src="./assets/images/btn-arrow-purple.svg" alt="icon" height="8">
                                         <span>Conocé los métodos de pago</span>
                                     </button>
@@ -175,7 +175,9 @@
                 </div>
             </div>
             <div class="order-2 lg:w-1/2 lg:order-1 mt-6 mx-auto lg:mt-0 lg:flex lg:justify-center lg:items-center">
-                <img src="./assets/images/oferta-comercial.png" alt="wallet">
+                <div class="flex justify-center items-center">
+                    <img src="./assets/images/oferta-comercial.png" alt="wallet">
+                </div>                
             </div>
         </div>
     </div>
@@ -261,8 +263,8 @@
     </div>
 
     <!--WALLET-->
-    <div id="wallet" class="container mx-auto px-3 sm:px-20 md:px-32 lg:px-15 flex flex-wrap py-20 text-black">
-        <div class="w-full lg:w-1/2 text-center lg:text-left">
+    <div id="wallet" class="container mx-auto px-3 sm:px-20 md:px-32 lg:px-15 flex flex-wrap pt-20 pb-20 lg:pb-10 text-black">
+        <div class="w-full lg:w-1/2 text-center lg:text-left lg:pt-20">
             <span class="text-xs font-bold text-white bg-blue-500 px-2 py-1 rounded">PRÓXIMAMENTE</span>
             <h2 class="text-3xl font-bold mt-5 leading-none">Tené tu cuenta virtual sin pasar por un banco.</h2>
             <p class="text-base font-medium leading-snug mt-4">Estamos construyendo la billetera Waynimóvil que puedas hacer lo mismo que en un banco pero simple y desde el celular.</p>
@@ -270,7 +272,6 @@
             <img class="block lg:hidden object-contain w-full mt-8" src="./assets/images/wallet-2.svg" alt="wallet">
 
             <div>
-
                 <div class="flex flex-wrap items-start justify-center mt-10">
                     <div class="w-full lg:w-1/6 flex justify-center lg:justify-start">
                         <img class="object-none object-center" src="./assets/images/dollar.svg" alt="icon">
@@ -301,12 +302,11 @@
                         <p class="mt-6px text-base font-medium text-gray-900">Sin papeles, sin validaciones extra. En un sólo click.</p>
                     </div>
                 </div>
-
             </div>
         </div>
 
         <div class="hidden lg:block w-full lg:w-1/2">
-            <img class="object-contain w-full" src="./assets/images/wallet-3.svg" alt="wallet">
+                <img class="object-contain w-full" src="./assets/images/wallet-3.svg" alt="wallet">
         </div>
     </div>
 
@@ -373,7 +373,8 @@
                         focus:shadow-outline-gray" type="text" placeholder="Tu email...">
                         
                         <div class="absolute bottom-5px right-7px">
-                            <img src="./assets/images/button-next-green.svg" alt="next" role="button">          
+                            <!--<img src="./assets/images/button-next-green.svg" alt="next" role="button">   -->
+                            <img src="./assets/images/button-next-green-disabled.svg" alt="next" role="button">          
                         </div>
                     </div>
                 </div>
