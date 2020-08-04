@@ -80,55 +80,60 @@
     </div>
 
     <!--HERO-->
-    <div id="hero" class="container mx-auto px-3 sm:px-20 md:px-32 lg:px-15 text-black">
-
-        <div class="flex relative hidden lg:block">
-            <img class="absolute right-0 top-8neg h-132" src="./assets/images/hero.png" alt="hero">
-        </div>
-
-        <div class="flex flex-wrap">
-            <div class="w-full lg:w-2/3">
-                <h1 class="text-4xl text-center lg:text-left lg:text-6xl font-bold leading-none mt-12 lg:mt-40 mb-6 lg:mb-10">Tenemos un <br>préstamo para vos</h1>
-
-                <div class="flex flex-col">
-                    <div class="order-1 lg:order-2">
-                        <button class="btn-big-fill lg:btn-medium-fill lg:text-base lg:mr-6 w-full lg:w-auto"
-                                        onclick="window.location.href='https://app.waynimovil.com/#/signup';">
-                            ¡Solicitá tu préstamo!
-                        </button>
-                        <button class="btn-big-outline px-5 w-full lg:w-auto mt-6"
-                                        onclick="window.location.href='https://app.waynimovil.com/#/estado-cuenta';">
-                            Consultá el estado de tu préstamo
-                        </button>
-                    </div>
-
-                    <div class="order-2 lg:order-1 flex justify-center lg:justify-start mt-6 lg:mt-0">
-                            <div class="mr-2">
-                                <img src="./assets/images/bullet-check-green.svg" alt="icon">
-                            </div>                    
-                            <div>
-                                <p class="text-xs text-black font-bold">Pedilo 100% online, sin moverte de tu casa.</p>
-                                <p class="text-xs text-black font-bold">Te lo depositamos en tu cuenta en el día.</p>                        
-                                <div class="text-center lg:text-left">
-                                    <button class="btn-text inline-flex items-center mt-2" @click="showModalRequisitos= true">
-                                        <img class="fill-current mr-1" src="./assets/images/btn-arrow-purple.svg" alt="icon" height="8">
-                                        <span>Conocé los requisitos</span>
-                                    </button>
+    <div id="hero" class="text-black">
+        <div class="container mx-auto px-3 sm:px-20 md:px-32 lg:px-15">
+            <div class="flex relative hidden lg:block">
+                <img class="absolute right-0 top-8neg h-132" src="./assets/images/hero.png" alt="hero">
+            </div>
+    
+            <div class="flex flex-wrap">
+                <div class="w-full lg:w-2/3">
+                    <h1 class="text-4xl text-center lg:text-left lg:text-6xl font-bold leading-none mt-12 lg:mt-40 mb-6 lg:mb-10">Tenemos un <br>préstamo para vos</h1>
+    
+                    <div class="flex flex-col">
+                        <div class="order-1 lg:order-2">
+                            <button class="btn-big-fill lg:btn-medium-fill lg:text-base lg:mr-6 w-full lg:w-auto"
+                                            onclick="window.location.href='https://app.waynimovil.com/#/signup';">
+                                ¡Solicitá tu préstamo!
+                            </button>
+                            <button class="btn-big-outline px-5 w-full lg:w-auto mt-6"
+                                            onclick="window.location.href='https://app.waynimovil.com/#/estado-cuenta';">
+                                Consultá el estado de tu préstamo
+                            </button>
+                        </div>
+    
+                        <div class="order-2 lg:order-1 flex justify-center lg:justify-start mt-6 lg:mt-0">
+                                <div class="mr-2">
+                                    <img src="./assets/images/bullet-check-green.svg" alt="icon">
+                                </div>                    
+                                <div>
+                                    <p class="text-xs text-black font-bold">Pedilo 100% online, sin moverte de tu casa.</p>
+                                    <p class="text-xs text-black font-bold">Te lo depositamos en tu cuenta en el día.</p>                        
+                                    <div class="text-center lg:text-left">
+                                        <button class="btn-text inline-flex items-center mt-2" @click="showModalRequisitos= true">
+                                            <img class="fill-current mr-1" src="./assets/images/btn-arrow-purple.svg" alt="icon" height="8">
+                                            <span>Conocé los requisitos</span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>    
-                    
-                </div> 
+                        </div>    
+                        
+                    </div> 
+                </div>
+                <!--<div class="w-full lg:w-1/3">
+                    <img class="mt-5 lg:hidden" src="./assets/images/hero.png" alt="hero">
+                </div>-->
             </div>
+
             <div class="w-full lg:w-1/3">
-                <img class="mt-5 lg:hidden" src="./assets/images/hero.png" alt="hero">
+                <img class="mt-5 object-cover h-120 w-100 lg:hidden" src="./assets/images/hero.png" alt="hero">
             </div>
         </div>
     </div>
 
     <!--PROPOSAL-->
-    <div id="proposal" class="mt-16 lg:mt-30 lg:mb-26">
+    <div id="proposal" class="mt-4 lg:mt-30 lg:mb-26">
         <div class="container mx-auto px-3 sm:px-20 md:px-32 lg:px-15 flex flex-wrap text-black">
             <div class="order-1 lg:w-1/2 lg:order-2">
                 <div class="w-full lg:w-9/10">
@@ -263,7 +268,7 @@
     </div>
 
     <!--WALLET-->
-    <div id="wallet" class="container mx-auto px-3 sm:px-20 md:px-32 lg:px-15 flex flex-wrap pt-20 pb-20 lg:pb-10 text-black">
+    <div id="wallet" class="container mx-auto px-3 sm:px-20 md:px-32 lg:px-15 flex flex-wrap pt-24 pb-20 lg:pb-10 text-black">
         <div class="w-full lg:w-1/2 text-center lg:text-left lg:pt-20">
             <span class="text-xs font-bold text-white bg-blue-500 px-2 py-1 rounded">PRÓXIMAMENTE</span>
             <h2 class="text-3xl font-bold mt-5 leading-none">Tené tu cuenta virtual sin pasar por un banco.</h2>
@@ -272,7 +277,7 @@
             <img class="block lg:hidden object-contain w-full mt-8" src="./assets/images/wallet-2.svg" alt="wallet">
 
             <div>
-                <div class="flex flex-wrap items-start justify-center mt-10">
+                <div class="flex flex-wrap items-start justify-center mt-8">
                     <div class="w-full lg:w-1/6 flex justify-center lg:justify-start">
                         <img class="object-none object-center" src="./assets/images/dollar.svg" alt="icon">
                     </div>
@@ -283,7 +288,7 @@
                     </div>
                 </div>
 
-                <div class="flex flex-wrap items-startjustify-center mt-10">
+                <div class="flex flex-wrap items-startjustify-center mt-5">
                     <div class="w-full lg:w-1/6 flex justify-center lg:justify-start">
                         <img class="object-none object-center" src="./assets/images/mobile-scan.svg" alt="icon">
                     </div>
@@ -293,7 +298,7 @@
                     </div>
                 </div>
 
-                <div class="flex flex-wrap items-start justify-center mt-10">
+                <div class="flex flex-wrap items-start justify-center mt-5">
                     <div class="w-full lg:w-1/6 flex justify-center lg:justify-start">
                         <img class="object-none object-center" src="./assets/images/faces.svg" alt="icon">
                     </div>
@@ -359,8 +364,8 @@
                         shadow 
                         appearance-none 
                         border 
-                        rounded
-                        py-4 
+                        rounded-sm
+                        py-17px 
                         px-3
                         text-gray-900 
                         font-medium
@@ -556,7 +561,7 @@
 
     <!--FOOTER-->
     <div id="footer" class="bg-blue-900 text-white">
-        <div class="container mx-auto px-3 lg:px-15 py-20 flex flex-wrap">
+        <div class="container mx-auto px-3 lg:px-15 py-12 lg:py-20 flex flex-wrap">
             <div class="w-full flex justify-center lg:w-1/2 lg:justify-start lg:items-start">
                 <img src="./assets/images/wayni-logo-white.svg" alt="logo">
             </div>
@@ -580,7 +585,7 @@
     </div>
 
     <!--LEGAL-->
-    <div id="legal" class="container mx-auto px-3 lg:px-15 py-10 lg:py-16 flex flex-wrap">
+    <div id="legal" class="container mx-auto px-6 lg:px-15 py-10 lg:py-16 flex flex-wrap">
         <div class="w-full lg:w-1/2">
             <p class="text-xs font-medium text-gray-900">(*)Tasa de Interés Nominal Anual (TNA) = 99% Tasa de Interés Efectiva Anual (TEA) = 159.03%. La tasa de interés es fija (valores sin iva). CFT(NA): 337.18%.</p>
             <p class="text-xs font-medium text-gray-900">El período máximo de repago son 180 días, todos tienen la opción de repago mínimo de 90 días.</p>   
