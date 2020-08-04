@@ -79,23 +79,27 @@ module.exports = {
         px: '1px',
         '2px': '2px',
         '4px': '4px',
+        '5px': '5px',
+        '6px': '6px',
         '7px': '7px',
         '8px': '8px',
         '12px': '12px',
         '13px': '13px',
         '23px': '23px',
         '24px': '24px',
+        '30px': '30px',
         '31px': '31px',
         '32px': '32px',        
         '34px': '34px',
         '36px': '36px',
         '0':  '0',
+        '05':	'0.125rem',   //-> 2px	
         '1':	'0.25rem',    //-> 4px	
         '2':	'0.5rem',     //-> 8px	
         '3':	'0.75rem',	  //-> 12px	
         '4':	'1rem',       //-> 16px	
         '5':	'1.25rem',    //-> 20px	
-        '6':	'1.5rem',     //-> 24px	<h3 class="text-center text-3xl font-bold leading-none lg:w-1/2 mx-auto">Un préstamo Waynimovil es mucho más que dinero.</h3>
+        '6':	'1.5rem',     //-> 24px
         '7':	'1.75rem',    //-> 28px	
         '8':	'2rem',       //-> 32px	
         '9':	'2.25rem',    //-> 36px	
@@ -110,8 +114,10 @@ module.exports = {
         '19':	'4.75rem',    //-> 76px	
         '20':	'5rem',       //-> 80px	
         '22':	'5.5rem',     //-> 88px
+        '23':	'5.75rem',    //-> 92px	
         '24':	'6rem',       //-> 96px	
         '26':	'6.5rem',     //-> 104px
+        '30':	'7.5rem',     //-> 120px  
         '32':	'8rem',       //-> 128px                                                                                                                                                                                                                                                                                                                                                                                                  
         '35':	'8.75rem',    //-> 140px
         '38':	'9.5rem',     //-> 152px	

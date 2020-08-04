@@ -9,6 +9,40 @@
     @apply bg-blue-900 border border-blue-900 text-white px-4 py-3 relative;
 }
 
+/* BTN HERO FILL */
+.btn-hero-fill {
+    @apply bg-purple-900 text-base text-white font-bold py-13px rounded-full;
+}
+.btn-hero-fill:focus {
+    @apply outline-none shadow-outline-purple;
+}
+.btn-hero-fill:hover {
+    @apply outline-none shadow-none bg-green-800;
+}
+.btn-hero-fill:active {
+    @apply outline-none shadow-none bg-green-900;
+}
+.btn-hero-fill:disabled {
+    @apply bg-purple-900 bg-opacity-50 outline-none shadow-none cursor-not-allowed;
+}
+
+/* BTN HERO OUTLINE */
+.btn-hero-outline {
+    @apply bg-transparent text-base text-purple-900 font-bold py-12px rounded-full border border-purple-900;
+}
+.btn-hero-outline:focus {
+    @apply outline-none shadow-outline-purple;
+}
+.btn-hero-outline:hover {
+    @apply outline-none shadow-none border-green-800 bg-green-800 text-white py-12px;
+}
+.btn-hero-outline:active {
+    @apply outline-none shadow-none border-green-900 bg-green-900 text-white py-12px;
+}
+.btn-hero-outline:disabled {
+    @apply bg-transparent text-purple-900 font-bold py-12px rounded-full border border-purple-900 border-opacity-50 text-opacity-50 cursor-not-allowed;
+}
+
 /* BTN BIG FILL */
 .btn-big-fill {
     @apply bg-purple-900 text-base text-white font-bold px-32px py-13px rounded-full;
