@@ -39,7 +39,7 @@
                 <span class="mr-6">¿Ya sos usuario?</span>
                 <button class="btn-big-outline px-8" onclick="window.location.href='https://www.waynimovil.com/iniciar/#/login';">Ingresá</button>
 
-                <button class="btn-big-fill px-8 ml-6" onclick="window.location.href='https://app.waynimovil.com/#/signup';">Solicitá tu préstamo!</button>
+                <button id="btnHeaderPrestamo" style="display:none;" class="btn-big-fill px-8 ml-6" onclick="window.location.href='https://app.waynimovil.com/#/signup';">¡Solicitá tu préstamo!</button>
             </div>
         </div>
 
@@ -101,7 +101,7 @@
                                             mt-6 lg:mt-10
                                             lg:text-base lg:mr-6 w-full sm:w-84 lg:w-auto"
                                             onclick="window.location.href='https://app.waynimovil.com/#/signup';">
-                                ¡Solicitá tu préstamos!
+                                ¡Solicitá tu préstamo!
                             </button>
             
                             <button class="btn-big-outline px-5 w-full sm:w-84 lg:w-auto mt-6 lg:mt-10"
@@ -193,7 +193,7 @@
     </div>
 
     <!--VALUES-->
-    <div id="values" class="container mx-auto px-3 sm:px-20 md:px-20 lg:px-15 mt-20 text-black">
+    <div id="values" class="container mx-auto px-3 sm:px-20 md:px-20 lg:px-15 mt-20 lg:mt-56 text-black">
         <h3 class="md:hidden xl:block text-center text-3xl lg:text-5xl font-bold leading-none">Un préstamo Waynimovil es</h3>
         <h3 class="md:hidden xl:block text-center text-3xl lg:text-5xl font-bold leading-none">mucho más que dinero.</h3>
 
@@ -260,7 +260,7 @@
                             w-full sm:w-84 lg:w-58 lg:px-1
                             mt-6"
                             onclick="window.location.href='https://app.waynimovil.com/#/signup';">
-                ¡Solicitá tu préstamos!
+                ¡Solicitá tu préstamo!
             </button>
         </div>
 
@@ -276,7 +276,7 @@
 
     <!--WALLET-->
     <div id="wallet">
-        <div class="container mx-auto px-3 sm:px-20 md:px-32 lg:px-15 flex flex-wrap pt-24 pb-20 lg:pb-10 xl:pb-0 text-black">
+        <div class="container mx-auto px-3 sm:px-20 md:px-32 lg:px-15 flex flex-wrap pt-24 pb-20 lg:pb-10 xl:pb-0 lg:mt-24 text-black">
             <div class="w-full lg:w-1/2 text-center lg:text-left lg:pt-20">
                 <span class="text-xs font-bold text-white bg-blue-500 px-2 py-1 rounded">PRÓXIMAMENTE</span>
                 <h2 class="text-3xl lg:text-4xl xl:text-5xl xl:w-11/12 font-bold mt-5 leading-none">Tené tu cuenta virtual sin pasar por un banco</h2>
@@ -762,6 +762,20 @@
     </div>
 
     <script>
+        window.onscroll = function() {
+            this.showElement('btnHeaderPrestamo', window.pageYOffset);
+        }  
+
+        function showElement(element, positionY) {
+            var el = document.getElementById(element);
+
+            if(el.style.display == '' && positionY <= 600){
+                el.style.display = 'none';   
+            } else if(el.style.display != '' && positionY >= 600) {
+                el.style.display = '';   
+            }  
+        }
+
         function mainFAQ(){
             return {
                 isOpenQ1: false,
