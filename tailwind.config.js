@@ -76,13 +76,20 @@ module.exports = {
         '6neg':	'-1.5rem',  //-> 24px	
         '7neg':	'-1.75rem', //-> 28px	
         '8neg':	'-2rem',    //-> 32px	
-        '54neg': '-13.5rem',//-> 216px	
-        '64neg': '-16rem',      //-> 256px
-        '66neg': '-16.5rem',    //-> 264px
-        '70neg': '-17.5rem',    //-> 280px
-        '72neg': '-18rem',      //-> 288px
-        '76neg':	'-19rem',      //-> 304px
-        '80neg':	'-20rem',      //-> 320px
+        '9neg':	'-2.25rem',    //-> 36px	
+        '10neg':'-2.5rem',     //-> 40px	
+        '11neg':'-2.75rem',    //-> 44px	
+        '12neg':'-3rem',       //-> 48px	
+        '13neg':'-3.25rem',    //-> 52px
+        '14neg':'-3.5rem',     //-> 56px
+        '15negh':'-3.75rem',    //-> 60px
+        '54neg':'-13.5rem',//-> 216px	
+        '64neg':'-16rem',      //-> 256px
+        '66neg':'-16.5rem',    //-> 264px
+        '70neg':'-17.5rem',    //-> 280px
+        '72neg':'-18rem',      //-> 288px
+        '76neg':'-19rem',      //-> 304px
+        '80neg':'-20rem',      //-> 320px
         px: '1px',
         '2px': '2px',
         '4px': '4px',
