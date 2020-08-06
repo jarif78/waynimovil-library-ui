@@ -372,7 +372,8 @@
                 
                 <div class="flex justify-center lg:justify-start lg:mt-4">
                     <div class="relative">
-                        <input class="xs:w-80
+                        <input id="email"
+                        class="xs:w-80
                         sm:w-90
                         lg:w-120
                         mt-6 
@@ -390,11 +391,12 @@
                         leading-tight 
                         text-xs
                         focus:outline-none 
-                        focus:shadow-outline-gray" type="text" placeholder="Tu email...">
+                        focus:shadow-outline-gray" type="text" placeholder="Tu email..."
+                        onfocus="btnActivate()" onblur="btnDesactivate()">
                         
                         <div class="absolute bottom-5px right-7px">
                             <!--<img src="./assets/images/button-next-green.svg" alt="next" role="button">   -->
-                            <img src="./assets/images/button-next-green-disabled.svg" alt="next" role="button">          
+                            <img id="btnEmail" src="./assets/images/button-next-green-disabled.svg" alt="next" role="button">          
                         </div>
                     </div>
                 </div>
@@ -772,13 +774,21 @@
         }  
 
         function showElement(element, positionY) {
-            var el = document.getElementById(element);
+            let el = document.getElementById(element);
 
             if(el.style.display == '' && positionY <= 600){
                 el.style.display = 'none';   
             } else if(el.style.display != '' && positionY >= 600) {
                 el.style.display = '';   
             }  
+        }
+
+        function btnActivate() {
+            document.getElementById("btnEmail").src="./assets/images/button-next-green.svg";
+        }
+
+        function btnDesactivate() {
+            document.getElementById("btnEmail").src="./assets/images/button-next-green-disabled.svg";
         }
 
         function mainFAQ(){
