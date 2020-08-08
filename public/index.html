@@ -31,21 +31,27 @@
     <div id="header" class="sticky top-0 z-40 bg-white shadow-header" x-data="{ showModalMenu: false }">
         <div class="container mx-auto flex items-center justify-between px-3 py-3 lg:px-15 lg:py-3">
             <div>
-                <img class="object-contain h-6 lg:h-30px" src="./assets/images/wayni-logo-two-colors.svg" alt="logo">  
+                <a class="lg:hidden" href="index.html"><img id="logoMobile" class="object-contain h-6 lg:h-30px" src="./assets/images/wayni-logo-two-colors.svg" alt="logo"></a>  
+                <a class="hidden lg:inline-block" href="index.html"><img class="object-contain h-6 lg:h-30px" src="./assets/images/wayni-logo-two-colors.svg" alt="logo"></a>  
             </div>
-            <div class="flex lg:hidden">
-                <button class="btn-medium-outline" onclick="window.location.href='https://www.waynimovil.com/iniciar/#/login';">Ingresar</button>
-                <img x-on:click=" showModalMenu = !showModalMenu" src="./assets/images/hamburger.svg" alt="menu" class="ml-3" role="button">
-            </div>
-            <div class="flex items-center justify-between hidden lg:block text-black">
-                <a class="btn-text text-base mr-6" href="https://ayuda.waynimovil.com/" target="_blank">Centro de Ayuda</a>
-                <a class="btn-text text-base mr-6" href="https://blog.waynimovil.com/" target="_blank">Blog</a>
-                <img class="object-none inline mr-6" src="./assets/images/division.svg" alt="icon">
-                <span class="mr-6 hidden xl:inline-flex">¿Ya sos usuario?</span>
-                <button class="btn-big-outline px-8" onclick="window.location.href='https://www.waynimovil.com/iniciar/#/login';">Ingresá</button>
-
-                <button id="btnHeaderPrestamo" style="display:none;" class="btn-big-fill px-8 ml-6" onclick="window.location.href='https://app.waynimovil.com/#/signup';">¡Solicitá tu préstamo!</button>
-            </div>
+            <div>
+                <div class="flex lg:hidden">
+                    <!--<button class="btn-medium-outline" onclick="window.location.href='https://www.waynimovil.com/iniciar/#/login';">Ingresar</button>-->
+    
+                    <button id="btnHeaderMobilePrestamo" style="display:none;" class="btn-medium-fill" onclick="window.location.href='https://app.waynimovil.com/#/signup';">¡Solicitá tu préstamo!</button>
+                    <img x-on:click=" showModalMenu = !showModalMenu" src="./assets/images/hamburger.svg" alt="menu" class="ml-3" role="button">
+    
+                </div>
+                <div class="items-center justify-between hidden lg:block text-black">
+                    <a class="btn-text text-base mr-6" href="https://ayuda.waynimovil.com/" target="_blank">Centro de Ayuda</a>
+                    <a class="btn-text text-base mr-6" href="https://blog.waynimovil.com/" target="_blank">Blog</a>
+                    <img class="object-none inline mr-6" src="./assets/images/division.svg" alt="icon">
+                    <span class="mr-6 hidden xl:inline-flex">¿Ya sos usuario?</span>
+                    <button class="btn-big-outline px-8" onclick="window.location.href='https://www.waynimovil.com/iniciar/#/login';">Ingresá</button>
+    
+                    <button id="btnHeaderPrestamo" style="display:none;" class="btn-big-fill px-8 ml-6" onclick="window.location.href='https://app.waynimovil.com/#/signup';">¡Solicitá tu préstamo!</button>
+                </div>
+            </div>            
         </div>
 
         <!--MODAL MENU-->
@@ -121,7 +127,7 @@
                                 </div>                    
                                 <div>
                                     <p class="text-xs font-bold lg:text-2xl lg:font-medium text-black ">Pedilo 100% online, sin moverte de tu casa.</p>
-                                    <p class="text-xs font-bold lg:text-2xl lg:font-medium text-black ">Te lo depositamos en tu cuenta en el día.</p>                        
+                                    <p class="text-xs font-bold lg:text-2xl lg:font-medium text-black ">Te lo acreditamos directamente en tu cuenta bancaria ¡en 2 horas!</p>                        
                                     <div class="text-center lg:text-left">
                                         <button class="btn-text inline-flex items-center mt-2" @click="showModalRequisitos= true">
                                             <img class="fill-current mr-1" src="./assets/images/btn-arrow-purple.svg" alt="icon" height="8">
@@ -157,8 +163,8 @@
                                     <!--<img class="mt-5" src="./assets/images/vertical-line-sm.svg" alt="vertical line">-->
                                 </td>
                                 <td>
-                                    <h3 class="text-xl xl:text-2xl font-bold mt-1 lg:ml-2">Te registrás con tu DNI</h3>                    
-                                    <p class="text-base font-medium mb-10 lg:ml-2">Sólo necesitamos tu e-mail y celular. Sin vueltas.</p>
+                                    <h3 class="text-xl xl:text-2xl font-bold mt-1 lg:ml-2">Te registrás con tu DNI, Email y Celular</h3>                    
+                                    <p class="text-base font-medium mb-10 lg:ml-2">Solo necesitás tener una cuenta a tu nombre en un banco.</p>
                                 </td>
                             </tr>
                             <tr>
@@ -168,7 +174,7 @@
                                 </td>
                                 <td>
                                     <h3 class="text-xl xl:text-2xl font-bold mt-1 lg:ml-2">Calculamos el mejor préstamo para vos</h3>                    
-                                    <p class="text-base font-medium mb-8 lg:ml-2">Te decimos al instante cuánto podemos prestarte y cuáles son las condiciones.</p>
+                                    <p class="text-base font-medium mb-8 lg:ml-2">Te decimos al instante cuánto podemos prestarte y cuáles serán las condiciones de devolución.</p>
                                 </td>
                             </tr>
                             <tr>
@@ -176,8 +182,8 @@
                                     <img src="./assets/images/bullet-3.svg" alt="bullet" width="44" height="44">
                                 </td>
                                 <td>
-                                    <h3 class="text-xl xl:text-2xl font-bold mt-1 lg:ml-2">¡Depositamos el dinero en tu cuenta!</h3>                    
-                                    <p class="text-base font-medium lg:ml-2">Sin trámites ni papeles: recibís el dinero para usarlo como quieras, y lo debitamos de tu tarjeta de débito.</p>
+                                    <h3 class="text-xl xl:text-2xl font-bold mt-1 lg:ml-2">¡Acreditamos el dinero en tu cuenta!</h3>                    
+                                    <p class="text-base font-medium lg:ml-2">Sin trámites ni papeles: recibís el dinero para usarlo como quieras. Las cuotas te las debitamos de tu cuenta.</p>
         
                                     <button class="btn-text inline-flex items-center text-base mt-2 lg:ml-2" @click="showModalPagos = true">
                                         <img class="fill-current mr-1" src="./assets/images/btn-arrow-purple.svg" alt="icon" height="8">
@@ -211,8 +217,8 @@
                 h-76 sm:h-66 lg:h-90 xl:h-90
                 bg-purple-900 text-white p-6 xl:p-8 rounded rounded-bl-xl shadow-xl lg:rounded-bl-2xl lg:shadow-2xl">
                     <h4 class="text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold leading-tight md:leading-none">Es un préstamo</h4>
-                    <h4 class="text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold leading-tight md:leading-none">para todos</h4>
-                    <p class="text-base lg:text-xl xl:text-2xl font-medium leading-snug lg:leading-tight mt-6 text-white lg:text-opacity-75">Los requisitos son mínimos para que todos puedan acceder a un préstamo Waynimóvil: sólo necesitás validar tu identidad, y tener una cuenta bancaria.</p>
+                    <h4 class="text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold leading-tight md:leading-none">para todos y todas</h4>
+                    <p class="text-base lg:text-xl xl:text-2xl font-medium leading-snug lg:leading-tight mt-6 text-white lg:text-opacity-75">Los requisitos son mínimos para que todos puedan acceder a un crédito Wayni Móvil: solo necesitás validar tu identidad y tener una cuenta bancaria propia.</p>
                     
                     <div class="absolute bottom-8 right-8">
                         <img src="./assets/images/img-1.svg" alt="img">
@@ -248,6 +254,13 @@
                     <h4 class="text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold leading-tight md:leading-none">Estamos</h4>
                     <h4 class="text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold leading-tight md:leading-none">disponibles</h4>
                     <p class="text-base lg:text-xl xl:text-2xl font-medium leading-snug lg:leading-tight mt-6">Si tenés consultas, necesitás ayuda para operar en línea o simplemente preferís hablar con un humano no hay problema: hay un asesor que puede seguir tu caso de cerca.</p>
+                    
+                    <button class="btn-text inline-flex items-center mt-6 text-base text-white"
+                            onclick="window.location.href='https://ayuda.waynimovil.com/hc/es-419/requests/new';">
+                        <img class="fill-current mr-1" src="./assets/images/btn-arrow-white.svg" alt="icon" height="8">
+                        <span>Quiero saber más</span>
+                    </button>
+                    
                     <div class="absolute top-57 sm:top-48 lg:top-70 right-6">
                         <img src="./assets/images/img-3.svg" alt="img">
                     </div>                
@@ -334,40 +347,40 @@
     <div id="card" class="bg-black text-white">
 
         <div class="hidden xl:block relative w-1/2">
-            <img class="absolute z-10 h-80 w-125 right-123 top-16" src="./assets/images/visa-yellow.svg" alt="visa">
-            <img class="absolute z-20 h-80 w-125 right-10 top-52" src="./assets/images/visa-green.svg" alt="visa">
-            <img class="absolute z-10 h-80 w-125 right-123 top-90" src="./assets/images/visa-white.svg" alt="visa">
+            <img class="absolute z-10 h-80 w-125 right-123 top-16" src="./assets/images/mastercard-yellow.svg" alt="Mastercard">
+            <img class="absolute z-20 h-80 w-125 right-10 top-52" src="./assets/images/mastercard-green.svg" alt="Mastercard">
+            <img class="absolute z-10 h-80 w-125 right-123 top-90" src="./assets/images/mastercard-white.svg" alt="Mastercard">
         </div>
 
         <div class="container mx-auto px-3 lg:px-15 py-10 lg:pt-94px xl:py-56 flex flex-wrap ">
             <div class="hidden lg:block lg:w-1/2">
                 <div class="flex relative h-80">
-                    <!--<img class="absolute md:h-00 z-10 ml-0 mt-0" src="./assets/images/visa-yellow.svg" alt="visa">-->
-                    <img class="absolute md:h-80 z-20 ml-10neg mt-8neg xl:hidden" src="./assets/images/visa-green.svg" alt="visa">
-                    <!--<img class="absolute md:h-00 z-10 ml-0 mt-0" src="./assets/images/visa-white.svg" alt="visa">-->
+                    <!--<img class="absolute md:h-00 z-10 ml-0 mt-0" src="./assets/images/mastercard-yellow.svg" alt="Mastercard">-->
+                    <img class="absolute md:h-80 z-20 ml-10neg mt-8neg xl:hidden" src="./assets/images/mastercard-green.svg" alt="Mastercard">
+                    <!--<img class="absolute md:h-00 z-10 ml-0 mt-0" src="./assets/images/mastercard-white.svg" alt="Mastercard">-->
                 </div>
             </div>
             <div class="w-full lg:w-1/2">
                 <div class="block md:hidden lg:block">
                     <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center lg:text-left leading-none">Tu billetera viene con</h2>
-                    <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center lg:text-left leading-none">una tarjeta Visa</h2>
+                    <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-center lg:text-left leading-none">una tarjeta Mastercard</h2>
                 </div>
 
                 <div class="hidden md:block lg:hidden">
-                    <h2 class="text-3xl lg:text-5xl font-bold text-center lg:text-left leading-none">Tu billetera viene con una tarjeta Visa</h2>
+                    <h2 class="text-3xl lg:text-5xl font-bold text-center lg:text-left leading-none">Tu billetera viene con una tarjeta Mastercard</h2>
                 </div>
 
                 <div class="flex justify-center mt-8 md:hidden">
-                    <img src="./assets/images/visa-green.svg" alt="visa">
+                    <img src="./assets/images/mastercard-green.svg" alt="Mastercard">
                 </div>
     
                 <div class="flex relative h-54 sm:h-84 md:h-75 hidden md:block lg:hidden">
-                    <img class="absolute hidden md:h-54 md:w-83 z-10 md:block ml-1 mt-20" src="./assets/images/visa-yellow.svg" alt="visa">
-                    <img class="absolute block md:h-54 md:w-83 z-20 md:ml-48 md:mt-5" src="./assets/images/visa-green.svg" alt="visa">
-                    <img class="absolute hidden md:h-54 md:w-83 z-10 md:block ml-100 mt-20" src="./assets/images/visa-white.svg" alt="visa">
+                    <img class="absolute hidden md:h-54 md:w-83 z-10 md:block ml-1 mt-20" src="./assets/images/mastercard-yellow.svg" alt="Mastercard">
+                    <img class="absolute block md:h-54 md:w-83 z-20 md:ml-48 md:mt-5" src="./assets/images/mastercard-green.svg" alt="Mastercard">
+                    <img class="absolute hidden md:h-54 md:w-83 z-10 md:block ml-100 mt-20" src="./assets/images/mastercard-white.svg" alt="Mastercard">
                 </div>
     
-                <p class="md:w-120 mx-auto lg:mx-0 text-xl lg:text-2xl font-medium text-center lg:text-left mt-6 lg:w-120 leading-tight">La vas a poder usar para hacer compras en cuotas por Internet o en cualquier lugar físico que acepte Visa 😉</p>
+                <p class="md:w-120 mx-auto lg:mx-0 text-xl lg:text-2xl font-medium text-center lg:text-left mt-6 lg:w-120 leading-tight">La vas a poder usar para hacer compras en cuotas por Internet o en cualquier lugar físico que acepte Mastercard 😉</p>
                 <p class="text-xl lg:text-2xl font-medium text-center lg:text-left mt-6 lg:w-120 leading-tight lg:hidden">Dejanos tu email y enterate cuando esté lista!</p>
                 
                 <div class="flex justify-center lg:justify-start lg:mt-4">
@@ -580,7 +593,7 @@
     <div id="footer" class="bg-blue-900 text-white">
         <div class="container mx-auto px-3 lg:px-15 py-12 lg:py-20 flex flex-wrap">
             <div class="w-full flex justify-center lg:w-1/2 lg:justify-start lg:items-start">
-                <img src="./assets/images/wayni-logo-white.svg" alt="logo">
+                <a href="index.html"><img src="./assets/images/wayni-logo-white.svg" alt="logo"></a>
             </div>
             <div class="w-full mt-7 lg:w-1/2 lg:mt-0">
                 <div class="text-base font-bold text-center lg:text-left lg:w-1/2 lg:ml-56">
@@ -719,7 +732,7 @@
                             <img src="./assets/images/card.svg" alt="card">
                         </div>
                         <div class="w-10/12">
-                            <p class="text-base font-bold">Débito automático en tu cuenta bancaria o con tu tarjeta de débito VISA.</p>
+                            <p class="text-base font-bold">Débito automático en tu cuenta bancaria o con tu tarjeta de débito Mastercard.</p>
                             <p class="text-xs font-bold text-blue-900 my-2">La opción más fácil de pagar tus cuotas a tiempo</p>
                         </div>
                     </div>  
@@ -770,8 +783,20 @@
 
     <script>
         window.onscroll = function() {
+            this.showElement('btnHeaderMobilePrestamo', window.pageYOffset);
             this.showElement('btnHeaderPrestamo', window.pageYOffset);
+            this.changeLogo('logoMobile', window.pageYOffset);
         }  
+
+        function changeLogo(element, positionY) {
+            let el = document.getElementById(element);
+
+            if(el.src.includes("wayni-logo-mini") && positionY <= 600){
+                el.src="./assets/images/wayni-logo-two-colors.svg";  
+            } else if(el.src.includes("wayni-logo-two-colors") && positionY >= 600) {
+                el.src="./assets/images/wayni-logo-mini.svg";  
+            } 
+        }
 
         function showElement(element, positionY) {
             let el = document.getElementById(element);
