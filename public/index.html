@@ -29,7 +29,7 @@
 
     <!--HEADER-->
     <div id="header" class="sticky top-0 z-40 bg-white shadow-header" x-data="{ showModalMenu: false }">
-        <div class="container mx-auto h-14 md:h-16 lg:h-22 flex items-center justify-between px-3 lg:px-15">
+        <div class="container mx-auto h-14 md:h-16 lg:h-22 px-3 lg:px-15 flex items-center justify-between">
             <div class="flex items-center">
                 <a class="lg:hidden" href="index.html"><img id="logoMobile" class="object-contain h-6 lg:h-30px" src="./assets/images/wayni-logo-two-colors.svg" alt="logo"></a>  
                 <a class="hidden lg:inline-block" href="index.html"><img class="object-contain h-6 lg:h-30px" src="./assets/images/wayni-logo-two-colors.svg" alt="logo"></a>  
@@ -38,7 +38,6 @@
                 <div class="flex items-center lg:hidden">
                     <button id="btnHeaderMobilePrestamo" style="display:none;" class="btn-medium-fill" onclick="window.location.href='https://app.waynimovil.com/#/signup';">¡Solicitá tu préstamo!</button>
                     <img x-on:click=" showModalMenu = !showModalMenu" src="./assets/images/hamburger.svg" alt="menu" class="ml-3 h-6" role="button">
-    
                 </div>
                 <div class="items-center justify-between hidden lg:block text-black">
                     <a class="btn-text text-base mr-6" href="https://ayuda.waynimovil.com/" target="_blank">Centro de Ayuda</a>
