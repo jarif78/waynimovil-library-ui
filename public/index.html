@@ -90,6 +90,62 @@
         </div>
     </div>
 
+    <!--HERO-->
+    <div id="hero" class="text-black">        
+        <div class="container mx-auto px-3 sm:px-20 md:px-10 lg:px-15">
+
+            <div class="flex relative hidden lg:block">
+                <img class="absolute top-0 right-8neg h-132 xl:h-155 xl:right-14neg" src="./assets/images/hero.png" alt="hero">
+            </div>
+
+            <div class="flex flex-wrap">
+                <div class="w-full lg:w-2/3">
+
+                    <h1 class="md:hidden lg:block text-4xl text-center lg:text-left sm:text-5xl lg:text-5xl xl:text-7xl font-bold leading-none mt-12 lg:mt-40 mb-3 lg:mb-10">Tenemos un <br>préstamo para vos</h1>
+                    <h1 class="hidden md:block lg:hidden text-5xl text-center lg:text-left lg:text-6xl font-bold leading-none mt-12 lg:mt-40 mb-6 lg:mb-10">Tenemos un préstamo para vos</h1>
+
+                    <div class="flex flex-col">
+                        <div class="order-1 lg:order-2 text-center lg:text-left flex flex-col mx-auto lg:flex-row lg:mx-0">
+                            <button class="btn-big-fill 
+                                            mt-6 lg:mt-10
+                                            lg:text-base lg:mr-6 w-full sm:w-84 lg:w-auto"
+                                            onclick="window.location.href='https://app.waynimovil.com/#/signup';">
+                                ¡Solicitá tu préstamo!
+                            </button>
+            
+                            <button class="btn-big-outline px-5 w-full sm:w-84 lg:w-auto mt-6 lg:mt-10"
+                                            onclick="window.location.href='https://app.waynimovil.com/#/estado-cuenta';">
+                                Consultá el estado de tu préstamo
+                            </button>
+                        </div>
+
+                        <div class="order-2 lg:order-1 flex justify-center lg:justify-start mt-6 lg:mt-0">
+                                <div class="mr-2 lg:pt-1">
+                                    <img src="./assets/images/bullet-check-green.svg" alt="icon">
+                                </div>                    
+                                <div>
+                                    <p class="text-xs font-bold lg:text-2xl lg:font-medium text-black ">Pedilo 100% online, sin moverte de tu casa.</p>
+                                    <p class="text-xs font-bold lg:text-2xl lg:font-medium text-black ">Te lo acreditamos directamente en tu cuenta bancaria ¡en 2 horas!</p>                        
+                                    <div class="text-center lg:text-left">
+                                        <button class="btn-text inline-flex items-center mt-2" @click="showModalRequisitos= true">
+                                            <img class="fill-current mr-1" src="./assets/images/btn-arrow-purple.svg" alt="icon" height="8">
+                                            <span class="lg:text-base">Conocé los requisitos</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                        
+                    </div> 
+                </div>
+            </div>
+
+            <div class="w-full lg:w-1/3 lg:hidden">
+                <img class="mt-5 object-cover h-120 w-100 sm:h-1/2 sm:w-1/2 sm:mx-auto lg:hidden" src="./assets/images/hero.png" alt="hero">
+            </div>
+        </div>        
+    </div>
+
     <!--PROPOSAL-->
     <div id="proposal" class="mt-4 lg:mt-56 lg:mb-26">
         <div class="container mx-auto px-3 sm:px-20 md:px-32 lg:px-15 flex flex-wrap text-black">
