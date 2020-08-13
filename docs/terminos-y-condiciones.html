@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Waynimovil - LandingPage</title>
+    <title>Waynimovil</title>
+
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-32x32.png" sizes="32x32">    
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96">
+
     <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.4.1/dist/alpine.min.js" defer></script>
@@ -24,20 +29,25 @@
 
     <!--HEADER-->
     <div id="header" class="sticky top-0 z-40 bg-white shadow-header" x-data="{ showModalMenu: false }">
-        <div class="container mx-auto flex items-center justify-between px-3 py-3 lg:px-15 lg:py-3">
-            <div>
-                <img class="object-contain h-6 lg:h-30px" src="./assets/images/wayni-logo-two-colors.svg" alt="logo">  
+        <div class="container mx-auto h-14 md:h-16 lg:h-22 px-3 lg:px-15 flex items-center justify-between">
+            <div class="flex items-center">
+                <a class="lg:hidden" href="index.html"><img id="logoMobile" class="object-contain h-6 lg:h-30px" src="./assets/images/wayni-logo-two-colors.svg" alt="logo"></a>  
+                <a class="hidden lg:inline-block" href="index.html"><img class="object-contain h-6 lg:h-30px" src="./assets/images/wayni-logo-two-colors.svg" alt="logo"></a>  
             </div>
-            <div class="flex lg:hidden">
-                <button class="btn-medium-outline" onclick="window.location.href='https://www.waynimovil.com/iniciar/#/login';">Ingresar</button>
-                <img x-on:click=" showModalMenu = !showModalMenu" src="./assets/images/hamburger.svg" alt="menu" class="ml-3" role="button">
-            </div>
-            <div class="flex items-center justify-between hidden lg:block text-black">
-                <a class="btn-text text-base mr-6" href="https://ayuda.waynimovil.com/">Centro de Ayuda</a>
-                <a class="btn-text text-base mr-6" href="https://blog.waynimovil.com/">Blog</a>
-                <img class="object-none inline mr-6" src="./assets/images/division.svg" alt="icon">
-                <span class="mr-6">¿Ya sos usuario?</span>
-                <button class="btn-big-outline px-8" onclick="window.location.href='https://www.waynimovil.com/iniciar/#/login';">Ingresá</button>
+            <div class="flex items-center">
+                <div class="flex items-center lg:hidden">
+                    <button id="btnHeaderMobilePrestamo" style="display:none;" class="btn-medium-fill mr-7" onclick="window.location.href='https://app.waynimovil.com/#/signup';">¡Solicitá tu préstamo!</button>
+                    <img x-on:click=" showModalMenu = !showModalMenu" src="./assets/images/hamburger.svg" alt="menu" class="ml-3 h-6" role="button">
+                </div>
+                <div class="items-center justify-between hidden lg:block text-black">
+                    <a class="btn-text text-base mr-6" href="https://ayuda.waynimovil.com/" target="_blank">Centro de Ayuda</a>
+                    <a class="btn-text text-base mr-6" href="https://blog.waynimovil.com/" target="_blank">Blog</a>
+                    <img class="object-none inline mr-6" src="./assets/images/division.svg" alt="icon">
+                    <span class="mr-6 hidden xl:inline-flex">¿Ya sos usuario?</span>
+                    <button class="btn-big-outline px-8" onclick="window.location.href='https://www.waynimovil.com/iniciar/#/login';">Ingresá</button>
+    
+                    <button id="btnHeaderPrestamo" style="display:none;" class="btn-big-fill px-8 ml-6" onclick="window.location.href='https://app.waynimovil.com/#/signup';">¡Solicitá tu préstamo!</button>
+                </div>
             </div>
         </div>
 
@@ -47,14 +57,14 @@
                 <div class="absolute inset-0 bg-purple-900">
                     <div class="px-2 py-2">
                         <div class="relative">
-                            <img class="absolute top-2 right-2 fill-current h-6 w-6 text-white" x-on:click="showModalMenu = false" src="./assets/images/close-white.svg" alt="close" role="button">
+                            <img class="absolute top-3 right-1 fill-current  text-white" x-on:click="showModalMenu = false" src="./assets/images/close-white.svg" alt="close" role="button">
                         </div>
-                        <hr class="opacity-25 mt-11">
+                        <hr class="opacity-25 mt-20">
                         <a class="block hover:underline focus:underline text-white font-bold text-center py-6" href="index.html">Inicio</a>
                         <hr class="opacity-25">
-                        <a class="block hover:underline focus:underline text-white font-bold text-center py-6" href="https://ayuda.waynimovil.com/hc/es-419">Centro de ayuda</a>
+                        <a class="block hover:underline focus:underline text-white font-bold text-center py-6" href="https://ayuda.waynimovil.com/hc/es-419" target="_blank">Centro de ayuda</a>
                         <hr class="opacity-25">
-                        <a class="block hover:underline focus:underline text-white font-bold text-center py-6" href="https://blog.waynimovil.com/">Blog</a>
+                        <a class="block hover:underline focus:underline text-white font-bold text-center py-6" href="https://blog.waynimovil.com/" target="_blank">Blog</a>
                         <hr class="opacity-25">
             
                         <div class="flex justify-center">
@@ -69,9 +79,9 @@
                         <a class="block hover:underline focus:underline text-white font-bold text-center py-6" href="https://www.waynimovil.com/iniciar/#/login">Ingresar</a>
             
                         <div class="flex justify-between w-1/3 mx-auto mt-7 mb-10">
-                            <a href="https://instagram.com/waynimovil/"><img src="./assets/images/instagram-white.svg" alt="instagram"></a>
-                            <a href="https://facebook.com/waynimovil/"><img src="./assets/images/facebook-white-2.svg" alt="facebook"></a>
-                            <a href="https://twitter.com/waynimovil"><img src="./assets/images/tweeter-white.svg" alt="tweeter"></a>
+                            <a href="https://instagram.com/waynimovil/" target="_blank"><img src="./assets/images/instagram-white.svg" alt="instagram"></a>
+                            <a href="https://facebook.com/waynimovil/" target="_blank"><img src="./assets/images/facebook-white-2.svg" alt="facebook"></a>
+                            <a href="https://twitter.com/waynimovil" target="_blank"><img src="./assets/images/tweeter-white.svg" alt="tweeter"></a>
                         </div>
                     </div>
                 </div>
@@ -79,8 +89,8 @@
         </div>
     </div>
 
-    <!--FAQ-->
-    <div id="faq" class="container mx-auto px-3 lg:px-15 py-20 text-black">
+    <!--TERMINOS-->
+    <div id="terminos" class="container mx-auto px-3 lg:px-15 py-20 text-black">
         <div class="lg:w-200 mx-auto">
             <div>
                 <h2 class="text-5xl font-bold text-center leading-none">Términos y condiciones</h2>
@@ -214,7 +224,7 @@
     
             <button class="btn-big-fill bg-white text-black hover:text-white text-base
                             w-full sm:w-84 
-                            mt-13 lg:mt-10"
+                            mt-13 md:mt-6 lg:mt-10"
                             onclick="window.location.href='https://app.waynimovil.com/#/signup';">
                 ¡Solicitá tu préstamo!
             </button>
@@ -223,9 +233,9 @@
 
     <!--FOOTER-->
     <div id="footer" class="bg-blue-900 text-white">
-        <div class="container mx-auto px-3 lg:px-15 py-20 flex flex-wrap">
+        <div class="container mx-auto px-3 lg:px-15 py-12 lg:py-20 flex flex-wrap">
             <div class="w-full flex justify-center lg:w-1/2 lg:justify-start lg:items-start">
-                <img src="./assets/images/wayni-logo-white.svg" alt="logo">
+                <a href="index.html"><img src="./assets/images/wayni-logo-white.svg" alt="logo"></a>
             </div>
             <div class="w-full mt-7 lg:w-1/2 lg:mt-0">
                 <div class="text-base font-bold text-center lg:text-left lg:w-1/2 lg:ml-56">
@@ -238,28 +248,217 @@
                 </div>
         
                 <div class="flex justify-between w-1/2 sm:w-1/4 mx-auto mt-7 lg:ml-56">
-                    <a href="https://instagram.com/waynimovil/"><img src="./assets/images/instagram-white.svg" alt="instagram"></a>
-                    <a href="https://facebook.com/waynimovil/"><img src="./assets/images/facebook-white-2.svg" alt="facebook"></a>
-                    <a href="https://twitter.com/waynimovil"><img src="./assets/images/tweeter-white.svg" alt="tweeter"></a>
+                    <a href="https://instagram.com/waynimovil/" target="_blank"><img src="./assets/images/instagram-white.svg" alt="instagram"></a>
+                    <a href="https://facebook.com/waynimovil/" target="_blank"><img src="./assets/images/facebook-white-2.svg" alt="facebook"></a>
+                    <a href="https://twitter.com/waynimovil" target="_blank"><img src="./assets/images/tweeter-white.svg" alt="tweeter"></a>
                 </div>
             </div>        
         </div>
     </div>
 
     <!--LEGAL-->
-    <div id="legal" class="container mx-auto px-3 lg:px-15 py-10 lg:py-16 flex flex-wrap">
-        <div class="w-full lg:w-1/2">
+    <div id="legal" class="container mx-auto px-6 lg:px-15 py-10 lg:py-16 flex flex-wrap">
+        <div class="w-full lg:w-7/12">
             <p class="text-xs font-medium text-gray-900">(*)Tasa de Interés Nominal Anual (TNA) = 99% Tasa de Interés Efectiva Anual (TEA) = 159.03%. La tasa de interés es fija (valores sin iva). CFT(NA): 337.18%.</p>
             <p class="text-xs font-medium text-gray-900">El período máximo de repago son 180 días, todos tienen la opción de repago mínimo de 90 días.</p>   
         </div>
-        <div class="w-full lg:w-1/2">
-            <div class="flex justify-center lg:justify-end mt-8 lg;mt-0">
-                <img class="mr-4" src="./assets/images/legal-1.svg" alt="legal">
-                <img class="mr-4" src="./assets/images/legal-2.svg" alt="legal">
-                <img src="./assets/images/legal-3.svg" alt="legal">
+        <div class="w-full lg:w-5/12">
+            <div class="flex justify-center lg:justify-end mt-8 lg:mt-0">
+                <img class="mr-4 lg:w-20 xl:w-21" src="./assets/images/legal-1.svg" alt="legal">
+                <img class="mr-4 lg:w-46 xl:w-46" src="./assets/images/legal-2.svg" alt="legal">
+                <img class="lg:w-auto" src="./assets/images/legal-3.svg" alt="legal">
             </div>
         </div>
     </div>
+
+    <!--MODAL REQUISITOS-->
+    <div x-show="showModalRequisitos" class="overflow-auto h-screen fixed z-50 bottom-0 inset-x-0 px-4 pb-4 sm:inset-0 sm:flex sm:items-center sm:justify-center">
+        <div class="fixed inset-0 transition-opacity">
+            <div class="absolute inset-0 bg-gray-900 opacity-75" @click="showModalRequisitos = false"></div>
+        </div>
+        <div class="bg-white mt-16 rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full" 
+            role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 text-black">
+                <div>
+                    <!--header-->
+                    <div class="flex justify-end items-center">
+                        <div class="cursor-pointer z-50" @click="showModalRequisitos = false">
+                            <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                                <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- content -->
+                    <h3 class="text-xl sm:text-2xl font-bold text-center">Requisitos para solicitar un préstamo</h3>
+
+                    <p class="mt-4 sm:mt-2 text-base font-medium text-center">Nuestra visión es que la mayor cantidad de personas puedan acceder a un préstamo Waynimóvil. Por eso no te vamos a pedir papeles, recibos de sueldos ni cosas raras. Nuestros requisitos son:</p>
+                    <p class="text-base font-medium text-center"></p>    
+                    
+                    <hr class="mt-10">
+
+                    <div class="flex mt-5">
+                        <div class="w-2/12">
+                            <img src="./assets/images/age-18.svg" alt="age-18">
+                        </div>
+                        <div class="w-10/12 flex flex-col">
+                            <p class="text-base font-bold">Ser mayor de edad</p>
+                            <p class="text-base font-medium">Más de 18 años, para ser exactos.</p>
+                        </div>
+                    </div>
+
+                    <hr class="mt-4">
+
+                    <div class="flex mt-5">
+                        <div class="w-2/12">
+                            <img src="./assets/images/bank.svg" alt="bank">
+                        </div>
+                        <div class="w-10/12 flex flex-col">
+                            <p class="text-base font-bold">Tener una cuenta bancaria</p>
+                            <p class="text-base font-medium">Para poder depositar el préstamo. La cuenta debe estar a tu nombre.</p>
+                        </div>
+                    </div>           
+
+                    <hr class="mt-4">
+
+                    <div class="flex mt-5">
+                        <div class="w-2/12">
+                            <img src="./assets/images/dni.svg" alt="dni">
+                        </div>
+                        <div class="w-10/12 flex flex-col">
+                            <p class="text-base font-bold">Tener DNI Argentino</p>
+                            <p class="text-base font-medium">Vamos a pedirte que le saques una foto al frente y al dorso del mismo.</p>
+                        </div>
+                    </div>
+
+                    <hr class="mt-4">
+
+                    <div class="flex mt-5">
+                        <div class="w-2/12">
+                            <img src="./assets/images/selfie.svg" alt="selfie">
+                        </div>
+                        <div class="w-10/12 flex flex-col">
+                            <p class="text-base font-bold">Una selfie 🤳 </p>
+                            <p class="text-base font-medium">Vamos a pedirte que te saques una selfie para poder validar tu identidad.</p>
+                        </div>
+                    </div>
+
+                    <hr class="mt-4 mb-10">
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <!--MODAL METODOS DE PAGO-->
+    <div x-show="showModalPagos" class="overflow-auto h-screen fixed z-50 bottom-0 inset-x-0 px-4 pb-4 sm:inset-0 sm:flex sm:items-center sm:justify-center">
+        <div class="fixed inset-0 transition-opacity">
+            <div class="absolute inset-0 bg-gray-900 opacity-75" @click="showModalPagos = false"></div>
+        </div>
+        <div class="bg-white mt-16 rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full" 
+            role="dialog" aria-modal="true" aria-labelledby="modal-headline">            
+            <div class="bg-white px-4 sm:p-6 pt-5">
+                <!--header-->
+                <div class="flex justify-end items-center">
+                    <div class="cursor-pointer z-50" @click="showModalPagos = false">
+                        <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                            <path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <!-- content -->
+                <h3 class="text-base sm:text-2xl font-bold text-center px-10 text-black">Estos son los métodos habilitados para pagar tu préstamo Waynimóvil:</h3>
+
+                <div class="px-3">
+                    <div class="flex mt-5 border border-gray-500 rounded-md shadow-md px-3 py-3 text-black">
+                        <div class="w-2/12 mr-4 flex justify-center">
+                            <img src="./assets/images/card.svg" alt="card">
+                        </div>
+                        <div class="w-10/12">
+                            <p class="text-base font-bold">Débito automático en tu cuenta bancaria o con tu tarjeta de débito Mastercard.</p>
+                            <p class="text-xs font-bold text-blue-900 my-2">La opción más fácil de pagar tus cuotas a tiempo</p>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="flex mt-5 px-6 text-black">
+                    <div class="w-2/12 mr-4 flex justify-center">
+                        <img src="./assets/images/bank.svg" alt="bank">
+                    </div>
+                    <div class="w-10/12 flex items-center">
+                        <p class="text-base font-medium">Por transferencia bancaria.</p>
+                    </div>
+                </div>           
+
+                <div class="px-3">
+                    <hr class="mt-4">
+                </div>           
+
+                <div class="flex mt-5 px-6 text-black">
+                    <div class="w-2/12 mr-4 flex justify-center">
+                        <img src="./assets/images/kiosco.svg" alt="kiosco">
+                    </div>
+                    <div class="w-10/12 flex items-center">
+                        <p class="text-base font-medium">En <span class="font-bold">Rapipago</span> o <span class="font-bold">PagoFácil</span>, con un cupón de pago.</p>
+                    </div>
+                </div>
+
+                <div class="px-3">
+                    <hr class="mt-4">
+                </div>  
+
+                <div class="flex mt-5 px-6 text-black">
+                    <div class="w-2/12 mr-4 flex justify-center">
+                        <img class="object-contain" src="./assets/images/mercadopago.svg" alt="mercado-pago">
+                    </div>
+                    <div class="w-10/12 flex items-center">
+                        <p class="text-base font-medium">A través de <span class="font-bold">MercadoPago</span>.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-blue-900 text-white rounded-b-lg mt-13 sm:mt-4 relative">
+                <img class="absolute right-4 top-7neg" src="./assets//images/guy.svg" alt="guy">
+                <p class="text-center text-base font-bold mx-4 pt-5">SABÍAS QUÉ...</p>
+
+                <p class="text-center text-base px-4 pt-1 pb-6 leading-snug"><span class="font-bold md:block">Pagar las cuotas de tu préstamo a tiempo te beneficia.</span> La próxima vez que nos necesites, vamos a poder prestarte más.</p>
+            </div>              
+        </div>        
+    </div>
+
+    <script>
+        window.onscroll = function() {
+            this.showElement('btnHeaderMobilePrestamo', window.pageYOffset);
+            this.showElement('btnHeaderPrestamo', window.pageYOffset);
+            this.changeLogo('logoMobile', window.pageYOffset);
+        }  
+
+        function changeLogo(element, positionY) {
+            let el = document.getElementById(element);
+
+            if(el.src.includes("wayni-logo-mini") && positionY <= 600){
+                el.src="./assets/images/wayni-logo-two-colors.svg";  
+            } else if(el.src.includes("wayni-logo-two-colors") && positionY >= 600) {
+                el.src="./assets/images/wayni-logo-mini.svg";  
+            } 
+        }
+
+        function showElement(element, positionY) {
+            let el = document.getElementById(element);
+
+            if(el.style.display == '' && positionY <= 600){
+                el.style.display = 'none';   
+            } else if(el.style.display != '' && positionY >= 600) {
+                el.style.display = '';   
+            }  
+        }
+
+        function btnActivate() {
+            document.getElementById("btnEmail").src="./assets/images/button-next-green.svg";
+        }
+
+        function btnDesactivate() {
+            document.getElementById("btnEmail").src="./assets/images/button-next-green-disabled.svg";
+        } 
+    </script>
 
 </body>
 </html>

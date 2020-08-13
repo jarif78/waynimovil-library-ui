@@ -130,7 +130,7 @@
 
 /* BTN TEXT */
 .btn-text {
-    @apply text-xs text-purple-900 font-bold;
+    @apply text-xs text-purple-900 font-bold bg-transparent px-2 py-0;
 }
 .btn-text:focus {
     @apply outline-none underline;
